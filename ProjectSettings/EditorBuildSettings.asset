@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Launcher/Launcher.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Achievements/Achievements.unity
+    guid: ce8b9447ce3739045af2b2cb58e0fc4f
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF1/MainMenu_1.unity
+    guid: cf93d889835959440944ee12cb095694
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF2/MainMenu_2.unity
+    guid: 90038b2afbafa5945b2294a9ce4549cc
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF3/MainMenu_3.unity
+    guid: 7b0e8de3e8aadce40832655823e39862
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF4/MainMenu_4.unity
+    guid: 8e72e1ff76366454a94fe16fae7460e9
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF1/splashScreen_1.unity
+    guid: 7d14f8aac74497243b7d037b67332981
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF2/splashScreen_2.unity
+    guid: 70224e273e0b6c446b764a1f310331e4
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF3/splashScreen_3.unity
+    guid: 2fa88fc3c0546f44791910738c6336f3
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF4/splashScreen_4.unity
+    guid: f67f08080eeec9a42a5ae3505eff0018
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF1/showNight_1.unity
+    guid: 21b8013020b68944b9542e8a3bc1008e
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF2/showNight_2.unity
+    guid: eb8b2fd1aaf80f148bbb7beef9e92c6a
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF3/showNight_3.unity
+    guid: b4d02d5fc2069bc40aaeb9ec2e605580
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF1/gameScene_1.unity
+    guid: 214a9a1e4e6d7a4449539b52043cee32
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF2/gameScene_2.unity
+    guid: b70cdeecb69f02a488094595381dbece
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF3/gameScene_3.unity
+    guid: 38966f6c876125945831e6d865662243
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF4/gameScene_4.unity
+    guid: f7e1ee23601a772449abc0801657e95f
+  m_configObjects: {}

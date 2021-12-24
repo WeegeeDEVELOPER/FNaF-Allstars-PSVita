@@ -6,6 +6,7 @@ public class officeScript_1_2_3 : MonoBehaviour {
 
 	[Header("Office variables")]
 	public Transform officeTransform;
+	public bool toolInUse = false;
 	public float moveSpeed;
 	public int[] camLimit;
 	public int currentLimit;
@@ -17,6 +18,7 @@ public class officeScript_1_2_3 : MonoBehaviour {
 
 	[Header("camera script")]
 	public cameraScript_1_2_3 camScript;
+	public Panel_3 panelScript;
 
 	void _fnaf3()
     {
@@ -40,13 +42,23 @@ public class officeScript_1_2_3 : MonoBehaviour {
 	}
 	
 	void Update () {
-		if (Input.GetKey(KeyCode.Joystick1Button11) || Input.GetKey(KeyCode.LeftArrow) && (camScript.isOn == false && camScript.status == "nothing"))
+
+		if (camScript.isOn || camScript.status == "animating")
+			toolInUse = true;
+		else if ((panelScript != null && panelScript.isOn) || (panelScript != null && panelScript.status == "animating"))
+			toolInUse = true;
+		else
+			toolInUse = false;
+
+		if (Input.GetKey(KeyCode.Joystick1Button11) || Input.GetKey(KeyCode.LeftArrow))
 		{
-			officeTransform.localPosition = new Vector3(officeTransform.localPosition.x + moveSpeed, officeTransform.localPosition.y, officeTransform.localPosition.z);
+			if (!toolInUse)
+				officeTransform.localPosition = new Vector3(officeTransform.localPosition.x + moveSpeed, officeTransform.localPosition.y, officeTransform.localPosition.z);
 		}
-		else if (Input.GetKey(KeyCode.Joystick1Button9) || Input.GetKey(KeyCode.RightArrow) && (camScript.isOn == false && camScript.status == "nothing"))
+		else if (Input.GetKey(KeyCode.Joystick1Button9) || Input.GetKey(KeyCode.RightArrow))
 		{
-			officeTransform.localPosition = new Vector3(officeTransform.localPosition.x - moveSpeed, officeTransform.localPosition.y, officeTransform.localPosition.z);
+			if (!toolInUse)
+				officeTransform.localPosition = new Vector3(officeTransform.localPosition.x - moveSpeed, officeTransform.localPosition.y, officeTransform.localPosition.z);
 		}
 
 		if (officeTransform.localPosition.x < camLimit[0]) officeTransform.localPosition = new Vector3(camLimit[0], officeTransform.localPosition.y, officeTransform.localPosition.z);

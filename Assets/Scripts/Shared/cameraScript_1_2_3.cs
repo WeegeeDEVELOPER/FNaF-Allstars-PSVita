@@ -194,7 +194,7 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 		}
 		else if (mapId == 1)
 		{
-			mapImage.sprite = vMap;
+			mapImage.sprite = map;
 			normalButtons.SetActive(true);
 			ventButtons.SetActive(false);
 			audioButton.SetActive(true);

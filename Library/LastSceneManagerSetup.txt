@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Launcher/Launcher.unity
+- path: Assets/Scenes/Game/FNaF3/gameScene_3.unity
   isLoaded: 1
   isActive: 1

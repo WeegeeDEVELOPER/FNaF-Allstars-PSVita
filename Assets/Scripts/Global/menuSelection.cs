@@ -163,14 +163,16 @@ public class menuSelection : MonoBehaviour {
     {
 		if (!_fnaf4)
         {
-			StartCoroutine(lowerMusicVolume());
+			if (whichNight < 2)
+            {
+				StartCoroutine(lowerMusicVolume());
 
-			_gmbg.StopAllCoroutines();
-			_staticOverlayAnim.enabled = false;
-			_splashFadeAnim.Play("splashFade");
+				_gmbg.StopAllCoroutines();
+				_staticOverlayAnim.enabled = false;
+				_splashFadeAnim.Play("splashFade");
+				yield return new WaitForSeconds(_fadeDuration);
+			}
 			//_mainMusic.Pause();
-
-			yield return new WaitForSeconds(_fadeDuration);
 		}
 		else if (_fnaf4)
         {
@@ -194,6 +196,7 @@ public class menuSelection : MonoBehaviour {
 		else
 		{
 			Debug.Log("continue game");
+			SceneManager.LoadSceneAsync("showNight_" + _gameType.ToString());
 		}
 
 		if (_whichOption == 2)

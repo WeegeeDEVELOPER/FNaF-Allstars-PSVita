@@ -62,6 +62,7 @@
      <Compile Include="Assets\Scripts\FNaF2\Game\flashLight_2.cs" />
      <Compile Include="Assets\Scripts\FNaF2\Game\mask_2.cs" />
      <Compile Include="Assets\Scripts\FNaF2\Game\power_2.cs" />
+     <Compile Include="Assets\Scripts\FNaF3\Game\Panel_3.cs" />
      <Compile Include="Assets\Scripts\FNaF4\Room\lookScript_4.cs" />
      <Compile Include="Assets\Scripts\Global\forceQuit.cs" />
      <Compile Include="Assets\Scripts\Global\globalMenuBackground.cs" />

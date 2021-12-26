@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Achievements\AchievementsMenu.cs" />
+     <Compile Include="Assets\Scripts\FNaF1\Game\animatronic_1.cs" />
      <Compile Include="Assets\Scripts\FNaF1\Game\button_1.cs" />
      <Compile Include="Assets\Scripts\FNaF1\Game\door_1.cs" />
      <Compile Include="Assets\Scripts\FNaF1\Game\flashLight_1.cs" />
@@ -69,6 +70,7 @@
      <Compile Include="Assets\Scripts\Global\menuSelection.cs" />
      <Compile Include="Assets\Scripts\Global\showNight.cs" />
      <Compile Include="Assets\Scripts\Global\splashScreen.cs" />
+     <Compile Include="Assets\Scripts\Global\timeScript.cs" />
      <Compile Include="Assets\Scripts\Global\whichNight.cs" />
      <Compile Include="Assets\Scripts\Launcher\Selector.cs" />
      <Compile Include="Assets\Scripts\Shared\cameraScript_1_2_3.cs" />

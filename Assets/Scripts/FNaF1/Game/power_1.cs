@@ -9,22 +9,20 @@ public class power_1 : MonoBehaviour {
 	public int _percentage;
 	public float _nightMultiplier;
 	public float _secondsPerDrop;
+	public float _droppedValue;
+	public float timer;
+	//public float _dropValue;
 
 	[Header("shared scripts")]
 	public usage_1 _usageScript;
 	public whichNight _nightScript;
 
-	void Start()
-    {
-        StartCoroutine(powerLoop());
-	}
-
-	void calculateSecondsPerDrop()
+	void calcDropTime()
     {
 		if (_nightScript._whichNight == 1)
-        {
+		{
 			_secondsPerDrop = 9.6f;
-        }
+		}
 		else if (_nightScript._whichNight == 2)
 		{
 			_secondsPerDrop = 9.4f;
@@ -45,45 +43,46 @@ public class power_1 : MonoBehaviour {
 		{
 			_secondsPerDrop = 8.6f;
 		}
-        else
-        {
-
-        }
+		else
+		{
+			_secondsPerDrop = 8.5f;
+		}
 	}
 
-	void checkUsageMultiplier()
+	void calculateSecondsPerDrop()
     {
+
 		if (_usageScript._whichUsage == 1)
-        {
-			_secondsPerDrop = (_secondsPerDrop / 2);
-        }
+		{
+			_secondsPerDrop = _secondsPerDrop /= 2;
+		}
 		else if (_usageScript._whichUsage == 2)
 		{
-			_secondsPerDrop = (_secondsPerDrop / 2) / 2;
+			_secondsPerDrop = ((_secondsPerDrop) / 2) / 2;
 		}
 		else if (_usageScript._whichUsage == 3)
 		{
-			_secondsPerDrop = ((_secondsPerDrop / 2) / 2) / 2;
+			_secondsPerDrop = (((_secondsPerDrop) / 2) / 2) / 2;
 		}
 		else if (_usageScript._whichUsage == 4)
 		{
-			_secondsPerDrop = (((_secondsPerDrop / 2) / 2) / 2) / 2;
+			_secondsPerDrop = ((((_secondsPerDrop) / 2) / 2) / 2) / 2;
 		}
 	}
 
 	void Update()
     {
+		calcDropTime();
 		calculateSecondsPerDrop();
-		checkUsageMultiplier();
+
+		timer += Time.deltaTime;
+
+		if (timer >= _secondsPerDrop)
+        {
+			_percentage--;
+			_percentageText.text = "Power left: <size=25>" + _percentage.ToString() + "%</size>";
+
+			timer = 0;
+		}
 	}
-	
-	IEnumerator powerLoop()
-    {
-		yield return new WaitForSeconds(_secondsPerDrop);
-
-		_percentage--;
-		_percentageText.text = "Power left: <size=25>" + _percentage.ToString() + "%</size>";
-
-		StartCoroutine(powerLoop());
-    }
 }

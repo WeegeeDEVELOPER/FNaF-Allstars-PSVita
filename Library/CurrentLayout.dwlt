@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -144,7 +144,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 102
+  controlID: 77
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -253,8 +253,8 @@ MonoBehaviour:
     y: 0
     width: 1055
     height: 556
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 18}
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -1246
+  m_LastSelectedObjectID: 13640
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -740,20 +740,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Animations/Shared
+    - Assets/Resources/gfx/FNaF1/Game/Cameras/anni/7
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Animations/Shared
+  - Assets/Resources/gfx/FNaF1/Game/Cameras/anni/7
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity Projects\FNaF_AllStars_Vita\FNaF-Allstars-psvita-
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 271}
-    m_SelectedIDs: 0a2f0000
-    m_LastClickedID: 12042
-    m_ExpandedIDs: 00000000122a00001e2a00003c2a00006c2a00004c2b00005e2b00008e2b0000cc2b0000322c00003a2c0000482c00006a2c0000902c0000382d0000722d0000742d0000762d0000ae2d0000b02d0000b62d0000c42d0000102e0000222e0000642e0000862e0000bc2e00005c2f00006c2f0000bc2f000088300000d8300000e23000001e3100005e3100008e3100009c310000aa310000e2310000f0310000fc3100001a32000084320000ce320000ea3200002c3300008c33000092330000c23300000834000000ca9a3b
+    scrollPos: {x: 0, y: 403}
+    m_SelectedIDs: 90340000
+    m_LastClickedID: 13456
+    m_ExpandedIDs: 00000000142a0000202a00003e2a0000662a00006e2a00005a2b00006c2b00009c2b0000da2b0000482c0000502c00005e2c0000802c0000a62c0000bc2c0000522d0000762d00008e2d0000902d0000922d0000ca2d0000cc2d0000d22d0000e02d0000302e0000422e0000842e0000ac2e0000e22e0000862f0000962f0000ec2f0000c2300000163100002031000060310000a8310000d8310000e6310000f631000032320000403200004c3200006a320000dc32000026330000483300008e330000ee330000f4330000283400006e34000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -781,7 +781,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000122a00001e2a00003c2a00006c2a0000e02a00004c2b00005e2b00008e2b0000cc2b0000322c00003a2c0000482c00006a2c0000902c0000a62c0000382d0000722d0000742d0000762d0000ae2d0000c42d0000bc2e00005c2f00006c2f0000bc2f000088300000d8300000e23000001e3100004c3100005e310000aa310000e2310000f0310000fc3100001a32000084320000ce3200002c3300008c330000c233000008340000
+    m_ExpandedIDs: 00000000142a0000202a00003e2a0000662a00006e2a00005a2b00006c2b00009c2b0000da2b0000482c0000502c00005e2c0000802c0000a62c0000bc2c0000522d0000762d00008e2d0000902d0000922d0000ca2d0000cc2d0000d22d0000e02d0000302e0000422e0000842e0000ac2e0000e22e0000862f0000962f0000ec2f0000c2300000163100002031000060310000a8310000d8310000e6310000f631000032320000403200004c3200006a320000dc32000026330000483300008e330000ee330000f4330000283400006e340000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -899,21 +899,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: e2fbffffe4fbffff000000009e340000b8340000d634000036350000b4350000
+    m_ExpandedIDs: 286bf9ff066cf9ff486df9ff4e6df9ff566df9ff5a6df9ff5e6df9ff626df9ff666df9ff6c6df9ff706df9ff746df9ff7a6df9ff7e6df9ff8c6df9ff9a6df9ffac6df9ffb26df9ffb86df9ffb4fbffffe2fbffffe4fbffff00000000063500002635000044350000a63500002c360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: EventSystem
+      m_OriginalName: EventSystem
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 13836
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 

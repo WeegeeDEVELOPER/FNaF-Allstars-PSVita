@@ -1033,8 +1033,10 @@ MonoBehaviour:
   endingScreens:
   - {fileID: 21300000, guid: 471f8143a3cad614bbdc19bfba7fa2ef, type: 3}
   - {fileID: 21300000, guid: dd98a6c7bd8b30d42b176bf997e8eabc, type: 3}
+  selection: 1
   whichGame: 4
   saved: 0
+  doSkip: 0
   scrollAnimation: {fileID: 671996514}
   goodEnding: {fileID: 0}
   loopedAmount: 0

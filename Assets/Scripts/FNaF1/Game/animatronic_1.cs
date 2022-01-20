@@ -169,7 +169,7 @@ public class animatronic_1 : MonoBehaviour {
 		Debug.Log("freddy random number = " + rand);
 		if (freddyLevel >= rand)
         {
-			if (bonniePos >= 1 && chicaPos >= 1)
+			if (bonniePos >= 1 && chicaPos >= 1 && camScr.isOn == false)
             {
 				if (rand >= 15)
 					freddyPos += 2;
@@ -287,7 +287,7 @@ public class animatronic_1 : MonoBehaviour {
     {
 		if (nightScr._whichNight >= 6)
         {
-			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + stageCams[6]);
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + stageCams[5]);
 			camScr.cams[0] = timelySprite;
 		}
 

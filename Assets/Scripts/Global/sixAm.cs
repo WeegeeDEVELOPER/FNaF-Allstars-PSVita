@@ -13,9 +13,13 @@ public class sixAm : MonoBehaviour {
 	public Image endingScreen;
 	public Sprite[] endingScreens;
 
+	[Header("specialSaves")]
+	public int selection;
+
 	[Header("gameType")]
 	public int whichGame;
 	public bool saved = false;
+	public bool doSkip = false;
 
 	[Header("fnaf 1 only")]
 	public GameObject scrollAnimation;
@@ -43,7 +47,6 @@ public class sixAm : MonoBehaviour {
 
 		StartCoroutine(sixAmAnim());
 		StartCoroutine(sixAmSound());
-		StartCoroutine(sixAmSound());
 	}
 
 	IEnumerator sixAmSound()
@@ -62,7 +65,7 @@ public class sixAm : MonoBehaviour {
         }
 
 		StartCoroutine(checkEnding());
-    }
+	}
 
 	IEnumerator sixAmAnim()
     {
@@ -174,12 +177,40 @@ public class sixAm : MonoBehaviour {
 
 	void saveGame()
     {
+		if (wNight._whichNight == 5)
+        {
+			if (selection > 0)
+            {
+				if (PlayerPrefs.HasKey("gss_game:" + whichGame.ToString() + "_var:" + (2).ToString()))
+				{
+					PlayerPrefs.SetString("gss_game:" + whichGame.ToString() + "_var:" + (2).ToString(), "unlocked");
+					PlayerPrefs.Save();
+				}
+			}
+		}
+		if (wNight._whichNight == 6)
+        {
+			if (selection > 1)
+			{
+				if (PlayerPrefs.HasKey("gss_game:" + whichGame.ToString() + "_var:" + (3).ToString()))
+                {
+					PlayerPrefs.SetString("gss_game:" + whichGame.ToString() + "_var:" + (3).ToString(), "unlocked");
+					PlayerPrefs.Save();
+				}
+			}
+		}
+
 		if (wNight._whichNight < 5 && saved == false)
         {
 			wNight._whichNight++;
 
 			saved = true;
 		}
+		else if (wNight._whichNight == 5 || wNight._whichNight == 6 || wNight._whichNight == 7)
+        {
+			doSkip = true;
+			wNight._whichNight = 5;
+        }
 
 		if (PlayerPrefs.HasKey("save_game:" + whichGame.ToString()))
 		{
@@ -187,9 +218,20 @@ public class sixAm : MonoBehaviour {
 			PlayerPrefs.Save();
 		}
 
-		if (wNight._whichNight <= 6)
-			SceneManager.LoadSceneAsync("showNight_" + whichGame.ToString());
-		else if (wNight._whichNight == 7)
+		if (wNight._whichNight <= 5 && doSkip == false)
+        {
+			if (wNight._whichGame != 4)
+            {
+				SceneManager.LoadSceneAsync("showNight_" + whichGame.ToString());
+			}
+            else
+            {
+				SceneManager.LoadSceneAsync("splashScreen_" + whichGame.ToString());
+			}
+		}
+		else if (doSkip == true)
+        {
 			SceneManager.LoadSceneAsync("MainMenu_" + whichGame.ToString());
+		}
 	}
 }

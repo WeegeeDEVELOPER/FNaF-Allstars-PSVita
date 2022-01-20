@@ -1033,8 +1033,14 @@ MonoBehaviour:
   endingScreens:
   - {fileID: 21300000, guid: effa3eebef1b23f4bbf9b6b8c619462a, type: 3}
   - {fileID: 21300000, guid: af080fad4b3ddbf458102dd1b930abf4, type: 3}
+  selection: 2
   whichGame: 1
+  saved: 0
   scrollAnimation: {fileID: 671996514}
+  goodEnding: {fileID: 0}
+  loopedAmount: 0
+  flickerAmount: 0
+  sixAmObject: {fileID: 0}
   audioPlayer: {fileID: 62628228}
   specialAudioPlayer: {fileID: 711486572}
   sounds:

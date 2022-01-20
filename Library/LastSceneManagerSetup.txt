@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Game/FNaF4/6am_4.unity
+- path: Assets/Scenes/Game/FNaF1/gameScene_1.unity
   isLoaded: 1
   isActive: 1

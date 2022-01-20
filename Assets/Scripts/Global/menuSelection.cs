@@ -196,16 +196,35 @@ public class menuSelection : MonoBehaviour {
 		else
 		{
 			Debug.Log("continue game");
-			SceneManager.LoadSceneAsync("showNight_" + _gameType.ToString());
+			if (_gameType != 4)
+            {
+				SceneManager.LoadSceneAsync("showNight_" + _gameType.ToString());
+			}
+            else
+            {
+				SceneManager.LoadSceneAsync("splashScreen_" + _gameType.ToString());
+			}
 		}
 
 		if (_whichOption == 2)
 		{
+			whichNight = 6;
+			PlayerPrefs.SetInt("save_game:" + _gameType.ToString(), whichNight);
+			PlayerPrefs.Save();
+			if (_gameType != 4)
+            {
+				SceneManager.LoadSceneAsync("showNight_" + _gameType.ToString());
+			}
+            else
+            {
+				SceneManager.LoadSceneAsync("splashScreen_" + _gameType.ToString());
+			}
 			Debug.Log("extra night");
 		}
 
 		if (_whichOption == 3)
 		{
+			SceneManager.LoadSceneAsync("customNight_" + _gameType.ToString());
 			Debug.Log("custom night...");
 		}
 	}

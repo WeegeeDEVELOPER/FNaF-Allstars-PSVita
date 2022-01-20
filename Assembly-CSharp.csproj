@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Global\globalMenuBackground.cs" />
      <Compile Include="Assets\Scripts\Global\menuSelection.cs" />
      <Compile Include="Assets\Scripts\Global\showNight.cs" />
+     <Compile Include="Assets\Scripts\Global\sixAm.cs" />
      <Compile Include="Assets\Scripts\Global\splashScreen.cs" />
      <Compile Include="Assets\Scripts\Global\timeScript.cs" />
      <Compile Include="Assets\Scripts\Global\whichNight.cs" />

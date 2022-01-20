@@ -1409,6 +1409,7 @@ MonoBehaviour:
   _doorScript: {fileID: 703092768}
   _lightScript: {fileID: 703092767}
   _buttonScript: {fileID: 703092769}
+  camScr: {fileID: 703092774}
 --- !u!114 &703092771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1481,6 +1482,7 @@ MonoBehaviour:
   camScreenImg: {fileID: 967463895}
   animTime: 0.2
   isOn: 0
+  camOn: 0
   moves: 1
   status: nothing
   sfx:
@@ -1538,6 +1540,7 @@ MonoBehaviour:
   camIdMap1: 0
   camIdMap2: 0
   officeScript: {fileID: 703092764}
+  usageScr: {fileID: 0}
 --- !u!114 &703092775
 MonoBehaviour:
   m_ObjectHideFlags: 0

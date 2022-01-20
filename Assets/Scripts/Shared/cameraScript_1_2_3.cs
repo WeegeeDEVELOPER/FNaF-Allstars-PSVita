@@ -22,6 +22,7 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 
 	[Header("states")]
 	public bool isOn = false;
+	public int camOn = 0;
 	public bool moves = false;
 	public string status = "nothing";
 
@@ -56,6 +57,7 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 
 	[Header("office script")]
 	public officeScript_1_2_3 officeScript;
+	public usage_1 usageScr;
 
 	IEnumerator putUp()
     {
@@ -72,6 +74,7 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 			sfx[0].Play();
 			yield return new WaitForSeconds(animTime);
 			isOn = true;
+			camOn = 1;
 			camScreen.SetActive(true);
 			camGameObject.SetActive(false);
 			status = "nothing";
@@ -95,6 +98,7 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 			sfx[1].Play();
 			yield return new WaitForSeconds(animTime);
 			isOn = false;
+			camOn = 0;
 			camGameObject.SetActive(false);
 			status = "nothing";
 			yield break;

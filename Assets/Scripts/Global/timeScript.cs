@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class timeScript : MonoBehaviour {
 
@@ -36,6 +37,10 @@ public class timeScript : MonoBehaviour {
 		{
 			hourText.text = "12 " + hourExtraText;
 		}
+		else if (time == 6)
+        {
+			SceneManager.LoadSceneAsync("6am_" + wNight._whichGame.ToString());
+        }
         else
         {
 			hourText.text = time.ToString() + " " + hourExtraText;

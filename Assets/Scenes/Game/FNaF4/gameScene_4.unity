@@ -901,6 +901,7 @@ MonoBehaviour:
   time: 0
   hourExtraText: AM
   fnaf4: 1
+  whichGame: 0
   nightText: {fileID: 0}
   wNight: {fileID: 0}
   nightExtraText: 

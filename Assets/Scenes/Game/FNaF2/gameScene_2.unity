@@ -2853,6 +2853,7 @@ MonoBehaviour:
   camScreenImg: {fileID: 2100225053}
   animTime: 0.2
   isOn: 0
+  camOn: 0
   moves: 0
   status: nothing
   sfx:
@@ -2925,9 +2926,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hourText: {fileID: 1579930084}
-  secondsPerHour: 70
+  secondsPerHour: 60
   time: 0
   hourExtraText: AM
+  fnaf4: 0
+  whichGame: 0
   nightText: {fileID: 1959358784}
   wNight: {fileID: 936125897}
   nightExtraText: Night

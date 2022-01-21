@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class power_1 : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class power_1 : MonoBehaviour {
 	public float _secondsPerDrop;
 	public float _droppedValue;
 	public float timer;
+	public bool loaded;
 	//public float _dropValue;
 
 	[Header("shared scripts")]
@@ -84,5 +86,11 @@ public class power_1 : MonoBehaviour {
 
 			timer = 0;
 		}
+
+		if (_percentage < 0 && !loaded)
+        {
+			SceneManager.LoadSceneAsync("powerOut_" + _nightScript._whichGame.ToString());
+			loaded = true;
+        }
 	}
 }

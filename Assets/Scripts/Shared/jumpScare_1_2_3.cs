@@ -18,12 +18,12 @@ public class jumpScare_1_2_3 : MonoBehaviour {
 		whichJumpscare = PlayerPrefs.GetInt("prev_jumpscare_game:" + whichGame.ToString());
 		jumpScares.SetTrigger(whichJumpscare.ToString());
 
-		
+		StartCoroutine(jumpScareTimer());
 	}
 
 	IEnumerator jumpScareTimer()
     {
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(1.5f);
 
 		SceneManager.LoadSceneAsync("static_" + whichGame.ToString());
     }

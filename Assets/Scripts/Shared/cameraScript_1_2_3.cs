@@ -57,7 +57,6 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 
 	[Header("office script")]
 	public officeScript_1_2_3 officeScript;
-	public usage_1 usageScr;
 
 	IEnumerator putUp()
     {
@@ -180,7 +179,10 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 		camScreenImg.sprite = cams[whichCam];
 		camName.text = camNames[whichCam];
 		switchCam.SetTrigger("switch");
-		sfx[2].Play();
+		if (isOn)
+        {
+			sfx[2].Play();
+		}
 		resetMouse();
 	}
 

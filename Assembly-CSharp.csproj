@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\FNaF1\Game\door_1.cs" />
      <Compile Include="Assets\Scripts\FNaF1\Game\flashLight_1.cs" />
      <Compile Include="Assets\Scripts\FNaF1\Game\power_1.cs" />
+     <Compile Include="Assets\Scripts\FNaF1\Game\powerOut_1.cs" />
      <Compile Include="Assets\Scripts\FNaF1\Game\usage_1.cs" />
      <Compile Include="Assets\Scripts\FNaF2\Game\flashLight_2.cs" />
      <Compile Include="Assets\Scripts\FNaF2\Game\mask_2.cs" />
@@ -76,6 +77,7 @@
      <Compile Include="Assets\Scripts\Global\whichNight.cs" />
      <Compile Include="Assets\Scripts\Launcher\Selector.cs" />
      <Compile Include="Assets\Scripts\Shared\cameraScript_1_2_3.cs" />
+     <Compile Include="Assets\Scripts\Shared\customNight_1_2.cs" />
      <Compile Include="Assets\Scripts\Shared\jumpScare_1_2_3.cs" />
      <Compile Include="Assets\Scripts\Shared\officeScript_1_2_3.cs" />
      <Compile Include="Assets\Scripts\Shared\phoneCall_1_2_3.cs" />

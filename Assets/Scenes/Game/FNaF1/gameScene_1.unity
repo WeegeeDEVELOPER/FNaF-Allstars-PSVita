@@ -1638,6 +1638,7 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 0.4}
   staticOverlay: {fileID: 1327642462}
   move: {fileID: 1757633450}
+  foxyColor: {r: 1, g: 0, b: 0, a: 1}
   freddySfx:
   - {fileID: 8300000, guid: d8ed85a8cf2741c42b55e9b521e38e9c, type: 3}
   - {fileID: 8300000, guid: 14f3088968aa91546a1761295ca8f009, type: 3}
@@ -1653,14 +1654,14 @@ MonoBehaviour:
   freddySfxPlayer: {fileID: 271615189}
   kitchenSfxPlayer: {fileID: 1737241243}
   hallWaySfxPlayer: {fileID: 1322474144}
-  doorKnock: {fileID: 0}
+  doorKnock: {fileID: 920363831}
   playKitchenSfx: 
   playHallwaySfx: 
   timeScr: {fileID: 703092775}
   nightScr: {fileID: 703092771}
   officeScr: {fileID: 703092764}
   camScr: {fileID: 703092774}
-  doorScr: {fileID: 0}
+  doorScr: {fileID: 703092768}
 --- !u!1 &706381054
 GameObject:
   m_ObjectHideFlags: 0

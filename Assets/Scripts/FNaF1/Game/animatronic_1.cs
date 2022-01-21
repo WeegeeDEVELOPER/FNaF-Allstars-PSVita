@@ -44,6 +44,7 @@ public class animatronic_1 : MonoBehaviour {
 	public Color normalColor;
 	public Image staticOverlay;
 	public AudioSource move;
+	public Color foxyColor;
 
 	[Header("sfx")]
 	public AudioClip[] freddySfx;
@@ -113,6 +114,14 @@ public class animatronic_1 : MonoBehaviour {
 			chicaLevel = 12;
 			foxyLevel = 6;
 		}
+		if (nightScr._whichNight == 7)
+        {
+			//PlayerPrefs.SetInt("CN_" + whichGame.ToString() + "_" + anniName[i].ToString() + ":", levels[i]);
+			freddyLevel = PlayerPrefs.GetInt("CN_" + nightScr._whichGame.ToString() + "_" + "Freddy" + ":");
+			bonnieLevel = PlayerPrefs.GetInt("CN_" + nightScr._whichGame.ToString() + "_" + "Bonnie" + ":");
+			chicaLevel = PlayerPrefs.GetInt("CN_" + nightScr._whichGame.ToString() + "_" + "Chica" + ":");
+			foxyLevel = PlayerPrefs.GetInt("CN_" + nightScr._whichGame.ToString() + "_" + "Foxy" + ":");
+		}
 
 		StartCoroutine(freddyLoop());
 		StartCoroutine(mainLoop());
@@ -176,7 +185,7 @@ public class animatronic_1 : MonoBehaviour {
 					whichJumpscare = 0;
 					startJumpscare(whichJumpscare);
                 }
-                else
+                else if (!freddyAtDoor)
                 {
 					if (rand >= 15)
 						freddyPos += 2;
@@ -214,9 +223,10 @@ public class animatronic_1 : MonoBehaviour {
 			}
 			else if (bonnieAtDoor && doorScr.leftClosed == 1)
             {
+				bonnieAtDoor = false;
 				bonniePos = 1;
             }
-            else
+            else if (!bonnieAtDoor)
             {
 				if (rand >= 15)
 					bonniePos += 2;
@@ -240,14 +250,18 @@ public class animatronic_1 : MonoBehaviour {
             {
 				if (chicaAtDoor && doorScr.rightClosed == 0)
 				{
-					whichJumpscare = 1;
-					startJumpscare(whichJumpscare);
+					whichJumpscare = 2;
+					if (camScr.isOn == false)
+                    {
+						startJumpscare(whichJumpscare);
+					}
 				}
 				else if (chicaAtDoor && doorScr.rightClosed == 1)
 				{
+					chicaAtDoor = false;
 					chicaPos = 1;
 				}
-                else
+                else if (!chicaAtDoor)
                 {
 					if (rand >= 15)
 						chicaPos += 2;
@@ -305,7 +319,7 @@ public class animatronic_1 : MonoBehaviour {
     {
 		PlayerPrefs.SetInt("prev_jumpscare_game:" + nightScr._whichGame.ToString(), jumpscareID);
 		PlayerPrefs.Save();
-		SceneManager.LoadSceneAsync("jumpScare_" + nightScr._whichNight.ToString());
+		SceneManager.LoadSceneAsync("jumpScare_" + nightScr._whichGame.ToString());
     }
 
 	void setStageImages()
@@ -382,8 +396,9 @@ public class animatronic_1 : MonoBehaviour {
 		{
 			camScr.cams[7] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + freddyLocations[4]);
 		}
-		else if (freddyPos == 5)
+		else if (freddyPos >= 5)
 		{
+			freddyPos = 5;
 			freddyAtDoor = true;
 		}
 
@@ -423,9 +438,10 @@ public class animatronic_1 : MonoBehaviour {
 		{
 			camScr.cams[4] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + bonnieLocations[4]);
 		}
-		else if (bonniePos == 7)
+		else if (bonniePos >= 7)
         {
-			if (!hallWaySfxPlayer.isPlaying)
+			bonniePos = 7;
+			if (!hallWaySfxPlayer.isPlaying && bonnieAtDoor == false)
 				playWalkAudio();
 			bonnieAtDoor = true;
         }
@@ -475,9 +491,10 @@ public class animatronic_1 : MonoBehaviour {
 		{
 			camScr.cams[7] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + chicaLocations[5]);
 		}
-		else if (chicaPos == 8)
+		else if (chicaPos >= 8)
         {
-			if (!hallWaySfxPlayer.isPlaying)
+			chicaPos = 8;
+			if (!hallWaySfxPlayer.isPlaying && chicaAtDoor == false)
 				playWalkAudio();
 			chicaAtDoor = true;
         }
@@ -490,8 +507,9 @@ public class animatronic_1 : MonoBehaviour {
         {
 			camScr.cams[2] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + foxyLocations[2]);
 		}
-		else if (foxyPos == 3)
+		else if (foxyPos >= 3)
 		{
+			foxyPos = 3;
 			if (nightScr._whichNight < 5)
             {
 				camScr.cams[2] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + foxyLocations[3]);
@@ -501,10 +519,11 @@ public class animatronic_1 : MonoBehaviour {
 				camScr.cams[2] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + foxyLocations[4]);
 			}
 
-			StartCoroutine(foxyAttack());
+			if (!foxyAtDoor)
+            {
+				StartCoroutine(foxyAttack());
+			}
 		}
-
-		Resources.UnloadUnusedAssets();
 
 
 		if (freddyMoved || bonnieMoved || chicaMoved || foxyMoved)
@@ -513,11 +532,13 @@ public class animatronic_1 : MonoBehaviour {
 			if (camScr.isOn)
             {
 				move.Play();
-				camScr.switchCamera(camScr.whichCam);
 			}
+			camScr.switchCamera(camScr.whichCam);
 			yield return new WaitForSeconds(3);
 			staticOverlay.color = normalColor;
 		}
+
+		Resources.UnloadUnusedAssets();
 
 		if (freddyMoved)
 			freddyMoved = false;
@@ -533,18 +554,25 @@ public class animatronic_1 : MonoBehaviour {
 	IEnumerator foxyAttack()
     {
 		hallWaySfxPlayer.clip = foxyRunSfx;
+		hallWaySfxPlayer.Play();
 
-		yield return new WaitForSeconds(3f);
+		staticOverlay.color = foxyColor;
+
+		foxyAtDoor = true;
+
+		yield return new WaitForSeconds(hallWaySfxPlayer.clip.length + 1);
 
 		if (foxyAtDoor && doorScr.leftClosed == 0)
 		{
 			whichJumpscare = 3;
 			startJumpscare(whichJumpscare);
 		}
-		else if (foxyAtDoor && doorScr.rightClosed == 1)
+		else if (foxyAtDoor && doorScr.leftClosed == 1)
 		{
-			foxyPos = 0;
+			staticOverlay.color = normalColor;
 			doorKnock.Play();
+			foxyAtDoor = false;
+			foxyPos = 0;
 		}
 	}
 

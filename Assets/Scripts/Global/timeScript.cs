@@ -14,6 +14,7 @@ public class timeScript : MonoBehaviour {
 
 	[Header("night")]
 	public bool fnaf4;
+	public int whichGame;
 	public Text nightText;
 	public whichNight wNight;
 	public string nightExtraText;
@@ -23,6 +24,10 @@ public class timeScript : MonoBehaviour {
         {
 			setNightText();
 		}
+        else
+        {
+			whichGame = 4;
+        }
 		StartCoroutine(doTimeLoop());
 	}
 
@@ -39,8 +44,11 @@ public class timeScript : MonoBehaviour {
 		}
 		else if (time == 6)
         {
-			SceneManager.LoadSceneAsync("6am_" + wNight._whichGame.ToString());
-        }
+			if (!fnaf4)
+				SceneManager.LoadSceneAsync("6am_" + wNight._whichGame.ToString());
+			else
+				SceneManager.LoadSceneAsync("6am_" + whichGame.ToString());
+		}
         else
         {
 			hourText.text = time.ToString() + " " + hourExtraText;

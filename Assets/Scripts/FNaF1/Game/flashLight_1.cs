@@ -28,7 +28,7 @@ public class flashLight_1 : MonoBehaviour {
     {
 		if (anniScript.bonnieAtDoor == true)
         {
-			if (scare.isPlaying == false && doorScript.leftClosed == 1)
+			if (scare.isPlaying == false && doorScript.leftClosed == 0)
 				scare.Play();
 			_office.sprite = _otherOfficeSprites[2];
 		}
@@ -47,9 +47,9 @@ public class flashLight_1 : MonoBehaviour {
     {
 		if (anniScript.chicaAtDoor == true)
         {
-			if (scare.isPlaying == false && doorScript.rightClosed == 1)
+			if (scare.isPlaying == false && doorScript.rightClosed == 0)
 				scare.Play();
-			_office.sprite = _otherOfficeSprites[4];
+			_office.sprite = _otherOfficeSprites[3];
 		}
         else
         {

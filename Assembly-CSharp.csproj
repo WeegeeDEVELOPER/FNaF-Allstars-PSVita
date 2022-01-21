@@ -71,10 +71,12 @@
      <Compile Include="Assets\Scripts\Global\showNight.cs" />
      <Compile Include="Assets\Scripts\Global\sixAm.cs" />
      <Compile Include="Assets\Scripts\Global\splashScreen.cs" />
+     <Compile Include="Assets\Scripts\Global\staticScene.cs" />
      <Compile Include="Assets\Scripts\Global\timeScript.cs" />
      <Compile Include="Assets\Scripts\Global\whichNight.cs" />
      <Compile Include="Assets\Scripts\Launcher\Selector.cs" />
      <Compile Include="Assets\Scripts\Shared\cameraScript_1_2_3.cs" />
+     <Compile Include="Assets\Scripts\Shared\jumpScare_1_2_3.cs" />
      <Compile Include="Assets\Scripts\Shared\officeScript_1_2_3.cs" />
      <Compile Include="Assets\Scripts\Shared\phoneCall_1_2_3.cs" />
  <Reference Include="UnityEditor.StandardEvents">

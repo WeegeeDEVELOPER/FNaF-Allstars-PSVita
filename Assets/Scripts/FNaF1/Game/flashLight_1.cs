@@ -9,6 +9,7 @@ public class flashLight_1 : MonoBehaviour {
 	public Sprite _defaultOfficeSprite;
 	public Sprite[] _otherOfficeSprites;
 	public AudioSource _lightBuzz;
+	public AudioSource scare;
 	public string status = "NaN";
 
 	[Header("stats")]
@@ -20,10 +21,22 @@ public class flashLight_1 : MonoBehaviour {
 	[Header("scripts")]
 	public officeScript_1_2_3 _officeScript;
 	public cameraScript_1_2_3 camScript;
+	public door_1 doorScript;
+	public animatronic_1 anniScript;
 
 	void leftLightOn()
     {
-		_office.sprite = _otherOfficeSprites[0];
+		if (anniScript.bonnieAtDoor == true)
+        {
+			if (scare.isPlaying == false && doorScript.leftClosed == 1)
+				scare.Play();
+			_office.sprite = _otherOfficeSprites[2];
+		}
+        else
+        {
+			_office.sprite = _otherOfficeSprites[0];
+		}
+		
 		_lightBuzz.Play();
 		lightOn = 1;
 
@@ -32,7 +45,16 @@ public class flashLight_1 : MonoBehaviour {
 
 	void rightLightOn()
     {
-		_office.sprite = _otherOfficeSprites[1];
+		if (anniScript.chicaAtDoor == true)
+        {
+			if (scare.isPlaying == false && doorScript.rightClosed == 1)
+				scare.Play();
+			_office.sprite = _otherOfficeSprites[4];
+		}
+        else
+        {
+			_office.sprite = _otherOfficeSprites[1];
+		}
 		_lightBuzz.Play();
 		lightOn = 1;
 

@@ -68,4 +68,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game/FNaF4/6am_4.unity
     guid: be6ac0e1ca85531429ad22ff58efb611
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF1/jumpScare_1.unity
+    guid: 16ce0edb2a447fc418620c43ba3dba20
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF1/static_1.unity
+    guid: afd51bcd853c53a449d279bd492a5021
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF2/static_2.unity
+    guid: 79b0b590eddfb234fa9f773c90088298
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF3/static_3.unity
+    guid: f0c8ea7748b607546b61e114acd4f77b
+  - enabled: 1
+    path: Assets/Scenes/Game/FNaF4/static_4.unity
+    guid: 120c25f9a4c086247a3805f40331aa71
   m_configObjects: {}

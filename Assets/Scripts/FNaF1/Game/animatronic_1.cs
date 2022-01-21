@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class animatronic_1 : MonoBehaviour {
 
@@ -13,11 +14,8 @@ public class animatronic_1 : MonoBehaviour {
 	public string[] chicaLocations;
 	public string[] foxyLocations;
 
-	[Header("paths")]
-	//public int[] freddyPaths;
-	//public int[] bonniePath;
-	//public int[] chicaPaths;
-	//public int[] foxyPaths;
+	[Header("jumpscare")]
+	public int whichJumpscare;
 
 	[Header("positions")]
 	public int freddyPos;
@@ -55,6 +53,7 @@ public class animatronic_1 : MonoBehaviour {
 	public AudioSource freddySfxPlayer;
 	public AudioSource kitchenSfxPlayer;
 	public AudioSource hallWaySfxPlayer;
+	public AudioSource doorKnock;
 	public int[] playKitchenSfx;
 	public int[] playHallwaySfx;
 
@@ -63,6 +62,7 @@ public class animatronic_1 : MonoBehaviour {
 	public whichNight nightScr;
 	public officeScript_1_2_3 officeScr;
 	public cameraScript_1_2_3 camScr;
+	public door_1 doorScr;
 
 	void Start () {
 		StartCoroutine(startNight());
@@ -171,12 +171,18 @@ public class animatronic_1 : MonoBehaviour {
         {
 			if (bonniePos >= 1 && chicaPos >= 1 && camScr.isOn == false)
             {
-				if (rand >= 15)
-					freddyPos += 2;
-				else
-					freddyPos++;
-
-
+				if (freddyAtDoor && doorScr.rightClosed == 0)
+                {
+					whichJumpscare = 0;
+					startJumpscare(whichJumpscare);
+                }
+                else
+                {
+					if (rand >= 15)
+						freddyPos += 2;
+					else
+						freddyPos++;
+				}
 				freddyMoved = true;
 			}
 			StartCoroutine(showLoopResultsInGame());
@@ -201,10 +207,22 @@ public class animatronic_1 : MonoBehaviour {
 		Debug.Log("bonnie random number = " + rand);
 		if (bonnieLevel >= rand)
 		{
-			if (rand >= 15)
-				bonniePos += 2;
-			else
-				bonniePos++;
+			if (bonnieAtDoor && doorScr.leftClosed == 0)
+            {
+				whichJumpscare = 1;
+				startJumpscare(whichJumpscare);
+			}
+			else if (bonnieAtDoor && doorScr.leftClosed == 1)
+            {
+				bonniePos = 1;
+            }
+            else
+            {
+				if (rand >= 15)
+					bonniePos += 2;
+				else
+					bonniePos++;
+			}
 
 			bonnieMoved = true;
 			StartCoroutine(showLoopResultsInGame());
@@ -220,12 +238,23 @@ public class animatronic_1 : MonoBehaviour {
 		{
 			if (!chicaInKitchen)
             {
-				if (rand >= 15)
-					chicaPos += 2;
-				else
-					chicaPos++;
+				if (chicaAtDoor && doorScr.rightClosed == 0)
+				{
+					whichJumpscare = 1;
+					startJumpscare(whichJumpscare);
+				}
+				else if (chicaAtDoor && doorScr.rightClosed == 1)
+				{
+					chicaPos = 1;
+				}
+                else
+                {
+					if (rand >= 15)
+						chicaPos += 2;
+					else
+						chicaPos++;
+				}
 			}
-
 			chicaMoved = true;
 			StartCoroutine(showLoopResultsInGame());
 		}
@@ -240,7 +269,10 @@ public class animatronic_1 : MonoBehaviour {
 		{
 			if (!camScr.isOn && !foxyRunning)
             {
-				foxyPos++;
+                if (!foxyAtDoor)
+                {
+					foxyPos++;
+				}
 
 				foxyMoved = true;
 			}
@@ -269,18 +301,11 @@ public class animatronic_1 : MonoBehaviour {
 		hallWaySfxPlayer.Play();
 	}
 
-	void setDoorImages()
+	void startJumpscare(int jumpscareID)
     {
-		/*
-		if (freddyPos > freddyPaths.Length)
-			freddyAtDoor = true;
-		if (bonniePos > bonniePath.Length)
-			bonnieAtDoor = true;
-		if (chicaPos > chicaPaths.Length)
-			chicaAtDoor = true;
-		if (foxyPos > foxyPaths.Length)
-			foxyAtDoor = true;
-		*/
+		PlayerPrefs.SetInt("prev_jumpscare_game:" + nightScr._whichGame.ToString(), jumpscareID);
+		PlayerPrefs.Save();
+		SceneManager.LoadSceneAsync("jumpScare_" + nightScr._whichNight.ToString());
     }
 
 	void setStageImages()
@@ -332,7 +357,7 @@ public class animatronic_1 : MonoBehaviour {
 			camScr.cams[i] = camScr.camsBackup[i];
 		}
 
-		setDoorImages();
+		//setDoorImages();
 		setStageImages();
 
 		if (freddyMoved)
@@ -509,8 +534,19 @@ public class animatronic_1 : MonoBehaviour {
     {
 		hallWaySfxPlayer.clip = foxyRunSfx;
 
-		yield return new WaitForSeconds(2f);
-    }
+		yield return new WaitForSeconds(3f);
+
+		if (foxyAtDoor && doorScr.leftClosed == 0)
+		{
+			whichJumpscare = 3;
+			startJumpscare(whichJumpscare);
+		}
+		else if (foxyAtDoor && doorScr.rightClosed == 1)
+		{
+			foxyPos = 0;
+			doorKnock.Play();
+		}
+	}
 
 	IEnumerator chicaKitchen()
     {

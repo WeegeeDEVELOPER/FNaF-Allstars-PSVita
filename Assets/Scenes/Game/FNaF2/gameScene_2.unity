@@ -2683,6 +2683,7 @@ GameObject:
   - component: {fileID: 936125899}
   - component: {fileID: 936125900}
   - component: {fileID: 936125901}
+  - component: {fileID: 936125902}
   m_Layer: 0
   m_Name: scriptObject
   m_TagString: Untagged
@@ -2934,6 +2935,59 @@ MonoBehaviour:
   nightText: {fileID: 1959358784}
   wNight: {fileID: 936125897}
   nightExtraText: Night
+--- !u!114 &936125902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 936125892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad98d8cb9d4ba5c408375cc94ec722eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stageCams: []
+  freddyLocations: []
+  bonnieLocations: []
+  chicaLocations: []
+  foxyLocations: []
+  toyFreddyLocations: []
+  toyBonnieLocations: []
+  toyChicaLocations: []
+  mangleLocations: []
+  whichJumpscare: 0
+  freddyPos: 0
+  bonniePos: 0
+  chicaPos: 0
+  foxyPos: 0
+  toyFreddyPos: 0
+  toyBonniePos: 0
+  toyChicaPos: 0
+  manglePos: 0
+  freddyLevel: 0
+  bonnieLevel: 0
+  chicaLevel: 0
+  foxyLevel: 0
+  toyFreddyLevel: 0
+  toyBonnieLevel: 0
+  toyChicaLevel: 0
+  mangleLevel: 0
+  freddyMoved: 0
+  bonnieMoved: 0
+  chicaMoved: 0
+  foxyMoved: 0
+  toyFreddyMoved: 0
+  toyBonnieMoved: 0
+  toyChicaMoved: 0
+  mangleMoved: 0
+  fxColor: {r: 1, g: 1, b: 1, a: 0.39215687}
+  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  staticOverlay: {fileID: 0}
+  move: {fileID: 0}
+  timeScr: {fileID: 936125901}
+  nightScr: {fileID: 936125897}
+  officeScr: {fileID: 936125893}
+  camScr: {fileID: 936125900}
 --- !u!1 &973636220
 GameObject:
   m_ObjectHideFlags: 0

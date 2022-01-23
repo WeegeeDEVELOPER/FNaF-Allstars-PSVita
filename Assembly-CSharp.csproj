@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\FNaF1\Game\power_1.cs" />
      <Compile Include="Assets\Scripts\FNaF1\Game\powerOut_1.cs" />
      <Compile Include="Assets\Scripts\FNaF1\Game\usage_1.cs" />
+     <Compile Include="Assets\Scripts\FNaF2\Game\animatronic_2.cs" />
      <Compile Include="Assets\Scripts\FNaF2\Game\flashLight_2.cs" />
      <Compile Include="Assets\Scripts\FNaF2\Game\mask_2.cs" />
      <Compile Include="Assets\Scripts\FNaF2\Game\power_2.cs" />

@@ -1967,7 +1967,7 @@ MonoBehaviour:
     <size=11>Thank you for all these years!</size><size=13>
 
 
-    <b>FreeDEV</b> (All-Stars Creator)
+    <b>BasDEV</b> (All-Stars Creator)
 
     <b>hatoving</b> (Additonal Stuff)
 
@@ -2227,7 +2227,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: by FreeDEV (& hatoving)
+  m_Text: by BasDEV (& hatoving)
 --- !u!222 &1974184969
 CanvasRenderer:
   m_ObjectHideFlags: 0

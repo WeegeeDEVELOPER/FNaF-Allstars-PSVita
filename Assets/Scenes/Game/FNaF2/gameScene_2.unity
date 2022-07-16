@@ -2947,6 +2947,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageCams: []
+  partsAndServiceCams: []
   freddyLocations: []
   bonnieLocations: []
   chicaLocations: []
@@ -2955,6 +2956,8 @@ MonoBehaviour:
   toyBonnieLocations: []
   toyChicaLocations: []
   mangleLocations: []
+  bbLocations: []
+  marionetteLocations: []
   whichJumpscare: 0
   freddyPos: 0
   bonniePos: 0
@@ -2964,6 +2967,8 @@ MonoBehaviour:
   toyBonniePos: 0
   toyChicaPos: 0
   manglePos: 0
+  bbPos: 0
+  marionettePos: 0
   freddyLevel: 0
   bonnieLevel: 0
   chicaLevel: 0
@@ -2972,6 +2977,8 @@ MonoBehaviour:
   toyBonnieLevel: 0
   toyChicaLevel: 0
   mangleLevel: 0
+  bbLevel: 0
+  marionetteLevel: 0
   freddyMoved: 0
   bonnieMoved: 0
   chicaMoved: 0
@@ -2980,9 +2987,11 @@ MonoBehaviour:
   toyBonnieMoved: 0
   toyChicaMoved: 0
   mangleMoved: 0
+  bbMoved: 0
+  marionetteMoved: 0
   fxColor: {r: 1, g: 1, b: 1, a: 0.39215687}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
-  staticOverlay: {fileID: 0}
+  staticOverlay: {fileID: 1690176293}
   move: {fileID: 0}
   timeScr: {fileID: 936125901}
   nightScr: {fileID: 936125897}

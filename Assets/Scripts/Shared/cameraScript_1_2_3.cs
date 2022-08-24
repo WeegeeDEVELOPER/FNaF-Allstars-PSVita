@@ -37,11 +37,20 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 	public int whichCam;
 	public Text camName;
     public string[] camNames;
+	public string[] specialProperty;
 
 
 	[Header("Fnaf 2 specific stuff")]
 	public bool fnaf2;
 	public mask_2 maskScript;
+	public AudioSource musicBox;
+	public string musicBoxSpritePath;
+	public Image winderLevel;
+	public float unwindDelay;
+	public GameObject windButton;
+	public animatronic_2 ani2Script;
+	public int spriteCounter = 1;
+	public int maxSprites = 21;
 
 	[Header("fnaf 3 stuff")]
 	public bool fnaf3;
@@ -57,6 +66,7 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 
 	[Header("office script")]
 	public officeScript_1_2_3 officeScript;
+
 
 	IEnumerator putUp()
     {
@@ -109,6 +119,11 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 		for (int i = 0; i < cams.Length; i++)
 		{
 			camsBackup[i] = cams[i];
+		}
+
+		if (fnaf2)
+		{
+			StartCoroutine(unwindbox(unwindDelay));
 		}
 	}
 
@@ -171,6 +186,9 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 				camIdMap2 = whichCam;
 			}
         }
+
+		//fnaf 2
+		doMusicBox();
 	}
 
 	public void switchCamera(int camId)
@@ -219,6 +237,69 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 		}
 
 		switchCamera(whichCam);
+	}
+
+	public void windbox()
+    {
+		if (spriteCounter > 1)
+        {
+			spriteCounter -= 1;
+
+			Sprite timelySprite = Resources.Load<Sprite>(musicBoxSpritePath + spriteCounter.ToString());
+			winderLevel.sprite = timelySprite;
+		}
+	}
+
+	IEnumerator unwindbox(float delay)
+    {
+
+		yield return new WaitForSeconds(delay);
+
+		if (spriteCounter < maxSprites)
+			spriteCounter += 1;
+		//else
+			//ani2Script.
+
+		Sprite timelySprite = Resources.Load<Sprite>(musicBoxSpritePath + spriteCounter.ToString());
+		winderLevel.sprite = timelySprite;
+
+		StartCoroutine(unwindbox(delay));
+    }
+
+	public void doMusicBox()
+    {
+		if (isOn && fnaf2)
+        {
+
+			//audio part
+			if (specialProperty[whichCam] == "musicbox")
+			{
+				if (musicBox.isPlaying == false)
+				{
+					musicBox.Play();
+				}
+
+				windButton.SetActive(true);
+			}
+			else
+			{
+				if (musicBox != null)
+				{
+					musicBox.Stop();
+				}
+
+				windButton.SetActive(false);
+			}
+		}
+        else if (!isOn || !fnaf2)
+        {
+			if (musicBox.isPlaying == true)
+			{
+				musicBox.Stop();
+			}
+
+			windButton.SetActive(false);
+		}
 	}
 
 	void resetMouse()

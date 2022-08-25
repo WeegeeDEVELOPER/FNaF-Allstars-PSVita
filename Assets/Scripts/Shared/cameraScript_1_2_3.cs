@@ -43,6 +43,7 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 	[Header("Fnaf 2 specific stuff")]
 	public bool fnaf2;
 	public mask_2 maskScript;
+	/*
 	public AudioSource musicBox;
 	public string musicBoxSpritePath;
 	public Image winderLevel;
@@ -51,6 +52,7 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 	public animatronic_2 ani2Script;
 	public int spriteCounter = 1;
 	public int maxSprites = 21;
+	*/
 
 	[Header("fnaf 3 stuff")]
 	public bool fnaf3;
@@ -120,11 +122,6 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 		{
 			camsBackup[i] = cams[i];
 		}
-
-		if (fnaf2)
-		{
-			StartCoroutine(unwindbox(unwindDelay));
-		}
 	}
 
     public void cam()
@@ -186,9 +183,6 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 				camIdMap2 = whichCam;
 			}
         }
-
-		//fnaf 2
-		doMusicBox();
 	}
 
 	public void switchCamera(int camId)
@@ -239,6 +233,7 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 		switchCamera(whichCam);
 	}
 
+	/*
 	public void windbox()
     {
 		if (spriteCounter > 1)
@@ -301,6 +296,7 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 			windButton.SetActive(false);
 		}
 	}
+	*/
 
 	void resetMouse()
     {

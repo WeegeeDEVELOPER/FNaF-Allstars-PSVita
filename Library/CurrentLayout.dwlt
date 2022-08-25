@@ -45,7 +45,7 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 117
+  controlID: 41
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 118
+  controlID: 42
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 119
+  controlID: 43
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 46020
+  m_LastSelectedObjectID: 14834
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -774,20 +774,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Game/FNaF2
+    - Assets/Resources/gfx/FNaF2/Game/Cameras/anni/09
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes/Game/FNaF2
+  - Assets/Resources/gfx/FNaF2/Game/Cameras/anni/09
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity Projects\FNaF_AllStars_Vita\FNaF-Allstars-psvita-
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 2014}
-    m_SelectedIDs: 68350000
-    m_LastClickedID: 13672
-    m_ExpandedIDs: 00000000202a00002c2a00004a2a0000782a0000842a0000bc2a00000e2b0000142b0000aa2b0000e62b0000342c0000b62c0000be2c0000cc2c0000f22c00001a2d0000942d0000f42d00001a2e0000322e0000342e0000722e0000742e00007a2e0000e62e0000fa2e00003e2f00006c2f0000aa2f00006430000076300000c43100001e32000068320000a2320000c0320000f43200000233000016330000683300007633000082330000a0330000fc3300002c34000084340000aa340000f03400005a350000663500009c350000c0350000e635000000ca9a3b
+    scrollPos: {x: 0, y: 1223}
+    m_SelectedIDs: 646c0000
+    m_LastClickedID: 27748
+    m_ExpandedIDs: 00000000202a00002c2a00004e2a0000842a0000902a0000c82a00001e2b0000242b0000c22b0000fe2b0000582c0000de2c0000e62c0000f42c00001a2d0000422d00005e2d0000bc2d00001c2e0000462e00005e2e0000602e0000622e00009e2e0000a02e0000a62e0000122f0000262f00006e2f0000a02f0000e62f0000a0300000b2300000023200005c320000aa320000e43200000233000036330000483300005c330000ae330000bc330000c8330000e63300004a3400007a340000d4340000fe34000044350000ae350000ba350000f0350000143600003a3600002e6c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -815,7 +815,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000202a00002c2a00004a2a0000782a0000842a0000bc2a00000e2b0000aa2b0000e62b0000342c0000b62c0000be2c0000cc2c0000f22c00001a2d0000362d0000942d0000f42d00001a2e0000322e0000342e0000362e0000742e00007a2e0000e62e0000fa2e00003e2f00006c2f0000aa2f00006430000076300000d4300000c43100001e32000068320000a2320000c0320000f43200000233000016330000683300007633000082330000a0330000fc3300002c34000084340000aa340000f03400005a350000663500009c350000c0350000e6350000
+    m_ExpandedIDs: 00000000202a00002c2a00004e2a0000842a0000902a0000c82a00001e2b0000242b0000c22b0000fe2b0000582c0000de2c0000e62c0000f42c00001a2d0000422d0000bc2d00001c2e0000462e00005e2e0000602e00009e2e0000a02e0000a62e0000122f0000262f00006e2f0000a02f0000e62f0000a0300000b2300000023200005c320000aa320000e43200000233000036330000483300005c330000ae330000bc330000c8330000e63300004a3400007a340000d4340000fe34000044350000ae350000ba350000f0350000143600003a360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -842,7 +842,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000340c00004a310000e63100008a3d000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -933,7 +933,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 24bcfaff0ebdfaff50befaff54befaff58befaff5cbefaff62befaff68befaff6ebefaff72befaff76befaff7abefaff80befaff86befaff8cbefaff96befaff0ac0faff0ec0faff12c0faff16c0faff1cc0faff20c0faff24c0faff2ac0faff2ec0faff3cc0faff4ac0faff5cc0faff62c0faff66c0fafffe09fbff103ffbfff443fbff0e51fbff2c77fbff4ca0fbff3ea7fbff9853fdffa667fdff9025ffff9225ffff2447ffff36faffffe4fbffff000000000a38000072380000b63800002439000076390000be390000c6390000e0390000363a0000905400009454000050550000aa550000d6550000e45500002256000080560000
+    m_ExpandedIDs: 54dbfdff3adcfdff7cddfdff80ddfdff84ddfdff88ddfdff8eddfdff94ddfdff9addfdff9eddfdffa2ddfdffa6ddfdffacddfdffb2ddfdffb8ddfdffbcddfdff24dffdff28dffdff2cdffdff30dffdff36dffdff3adffdff3edffdff44dffdff48dffdff56dffdff64dffdff76dffdff7cdffdff82dffdffd8f9ffffe4fbffff00000000f2380000ae390000083a0000343a0000803a00008e3a0000de3a0000f83a00004e3b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -987,9 +987,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 561.2333, y: 297.96677, z: -267.8487}
+    m_Target: {x: 522.1492, y: 286.85745, z: -268.125}
     speed: 2
-    m_Value: {x: 561.2333, y: 297.96677, z: -267.8487}
+    m_Value: {x: 522.1492, y: 286.85745, z: -268.125}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1021,9 +1021,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 651.657
+    m_Target: 672.7493
     speed: 2
-    m_Value: 651.657
+    m_Value: 672.7493
   m_Ortho:
     m_Target: 1
     speed: 2

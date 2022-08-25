@@ -67,6 +67,7 @@ public class animatronic_2 : MonoBehaviour {
 	public whichNight nightScr;
 	public officeScript_1_2_3 officeScr;
 	public cameraScript_1_2_3 camScr;
+	public musicbox_2 musicBoxScr;
 
 
 	void Start () {
@@ -143,11 +144,13 @@ public class animatronic_2 : MonoBehaviour {
 		{
 			yield return new WaitForSeconds(timeScr.secondsPerHour * 2);
 			setDifficulty();
+			musicBoxScr.allowedToStart = true;
 			StartCoroutine(increaseDifficulty());
 		}
 		else
 		{
 			setDifficulty();
+			musicBoxScr.allowedToStart = true;
 			StartCoroutine(increaseDifficulty());
 		}
 	}
@@ -176,7 +179,10 @@ public class animatronic_2 : MonoBehaviour {
 		if (bbLevel != 0)
 			bbLevel++;
 		if (marionetteLevel != 0)
+        {
 			marionetteLevel++;
+			musicBoxScr.unwindDelay -= 0.1f;
+		}
 
 		StartCoroutine(increaseDifficulty());
 	}
@@ -223,6 +229,10 @@ public class animatronic_2 : MonoBehaviour {
 				freddyMoved = true;
 			}
 			*/
+
+			freddyMoved = true;
+			freddyPos++;
+
 			StartCoroutine(showLoopResultsInGame());
 		}
 	}
@@ -252,6 +262,10 @@ public class animatronic_2 : MonoBehaviour {
 				freddyMoved = true;
 			}
 			*/
+
+			bonnieMoved = true;
+			bonniePos++;
+
 			StartCoroutine(showLoopResultsInGame());
 		}
 	}
@@ -281,6 +295,10 @@ public class animatronic_2 : MonoBehaviour {
 				freddyMoved = true;
 			}
 			*/
+
+			chicaMoved = true;
+			chicaPos++;
+
 			StartCoroutine(showLoopResultsInGame());
 		}
 	}
@@ -310,6 +328,10 @@ public class animatronic_2 : MonoBehaviour {
 				freddyMoved = true;
 			}
 			*/
+
+			foxyMoved = true;
+			foxyPos++;
+
 			StartCoroutine(showLoopResultsInGame());
 		}
 	}
@@ -339,6 +361,10 @@ public class animatronic_2 : MonoBehaviour {
 				freddyMoved = true;
 			}
 			*/
+
+			toyFreddyMoved = true;
+			toyFreddyPos++;
+
 			StartCoroutine(showLoopResultsInGame());
 		}
 	}
@@ -368,6 +394,10 @@ public class animatronic_2 : MonoBehaviour {
 				freddyMoved = true;
 			}
 			*/
+
+			toyBonnieMoved = true;
+			toyBonniePos++;
+
 			StartCoroutine(showLoopResultsInGame());
 		}
 	}
@@ -397,6 +427,10 @@ public class animatronic_2 : MonoBehaviour {
 				freddyMoved = true;
 			}
 			*/
+
+			toyChicaMoved = true;
+			toyChicaPos++;
+
 			StartCoroutine(showLoopResultsInGame());
 		}
 	}
@@ -426,6 +460,10 @@ public class animatronic_2 : MonoBehaviour {
 				freddyMoved = true;
 			}
 			*/
+
+			mangleMoved = true;
+			manglePos++;
+
 			StartCoroutine(showLoopResultsInGame());
 		}
 	}
@@ -455,6 +493,10 @@ public class animatronic_2 : MonoBehaviour {
 				freddyMoved = true;
 			}
 			*/
+
+			bbMoved = true;
+			bbPos++;
+
 			StartCoroutine(showLoopResultsInGame());
 		}
 	}
@@ -464,7 +506,7 @@ public class animatronic_2 : MonoBehaviour {
 		double rand = System.Math.Round(UnityEngine.Random.Range(0f, 20f));
 		rand++;
 		Debug.Log("marionette random number = " + rand);
-		if (marionetteLevel >= rand)
+		if (marionetteLevel >= rand && musicBoxScr.spriteCounter == musicBoxScr.maxSprites)
 		{
 			/*
 			if (bonniePos >= 1 && chicaPos >= 1 && camScr.isOn == false)
@@ -484,6 +526,10 @@ public class animatronic_2 : MonoBehaviour {
 				freddyMoved = true;
 			}
 			*/
+
+			marionetteMoved = true;
+			marionettePos++;
+
 			StartCoroutine(showLoopResultsInGame());
 		}
 	}
@@ -662,7 +708,7 @@ public class animatronic_2 : MonoBehaviour {
 				move.Play();
 			}
 			camScr.switchCamera(camScr.whichCam);
-			yield return new WaitForSeconds(3);
+			yield return new WaitForSeconds(1.5f);
 			staticOverlay.color = normalColor;
 		}
 		
@@ -696,9 +742,10 @@ public class animatronic_2 : MonoBehaviour {
 
 	void setStageImages()
 	{
+		/*
 		if (nightScr._whichNight >= 6)
 		{
-			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + stageCams[5]);
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCams[5]);
 			camScr.cams[0] = timelySprite;
 		}
 
@@ -732,5 +779,6 @@ public class animatronic_2 : MonoBehaviour {
 			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCams[4]);
 			camScr.cams[0] = timelySprite;
 		}
+		*/
 	}
 }

@@ -2210,6 +2210,130 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 669796815}
   m_CullTransparentMesh: 0
+--- !u!1 &695749688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 695749689}
+  - component: {fileID: 695749690}
+  m_Layer: 0
+  m_Name: cameraMove
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &695749689
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695749688}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -499.19287, y: -390.27124, z: 5.875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1610129234}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &695749690
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 695749688}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5918f4fd9fc150046892be49ea0f93ba, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &701017363
 GameObject:
   m_ObjectHideFlags: 0
@@ -3037,6 +3161,7 @@ GameObject:
   - component: {fileID: 936125900}
   - component: {fileID: 936125901}
   - component: {fileID: 936125902}
+  - component: {fileID: 936125903}
   m_Layer: 0
   m_Name: scriptObject
   m_TagString: Untagged
@@ -3270,14 +3395,6 @@ MonoBehaviour:
   - 
   fnaf2: 1
   maskScript: {fileID: 936125899}
-  musicBox: {fileID: 864492894}
-  musicBoxSpritePath: gfx/FNaF2/Game/Cameras/musicbox/
-  winderLevel: {fileID: 248427711}
-  unwindDelay: 2
-  windButton: {fileID: 944556658}
-  ani2Script: {fileID: 936125902}
-  spriteCounter: 2
-  maxSprites: 21
   fnaf3: 0
   map: {fileID: 0}
   vMap: {fileID: 0}
@@ -3320,7 +3437,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad98d8cb9d4ba5c408375cc94ec722eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stageCams: []
+  stageCams:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   partsAndServiceCams: []
   freddyLocations: []
   bonnieLocations: []
@@ -3366,11 +3489,34 @@ MonoBehaviour:
   fxColor: {r: 1, g: 1, b: 1, a: 0.39215687}
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   staticOverlay: {fileID: 1690176293}
-  move: {fileID: 0}
+  move: {fileID: 695749690}
   timeScr: {fileID: 936125901}
   nightScr: {fileID: 936125897}
   officeScr: {fileID: 936125893}
   camScr: {fileID: 936125900}
+  musicBoxScr: {fileID: 936125903}
+--- !u!114 &936125903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 936125892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35cdc0344bdf2da4e862be8b7fbb91ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allowedToStart: 0
+  started: 0
+  musicBox: {fileID: 864492894}
+  musicBoxSpritePath: gfx/FNaF2/Game/Cameras/musicbox/
+  winderLevel: {fileID: 248427711}
+  windButton: {fileID: 944556658}
+  ani2Script: {fileID: 936125902}
+  camScript: {fileID: 936125900}
+  unwindDelay: 2.5
+  spriteCounter: 1
+  maxSprites: 21
 --- !u!1 &944556658
 GameObject:
   m_ObjectHideFlags: 0
@@ -3450,7 +3596,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 936125900}
+      - m_Target: {fileID: 936125903}
         m_MethodName: windbox
         m_Mode: 1
         m_Arguments:
@@ -6080,6 +6226,7 @@ Transform:
   - {fileID: 260516256}
   - {fileID: 415858089}
   - {fileID: 864492893}
+  - {fileID: 695749689}
   m_Father: {fileID: 1794841469}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

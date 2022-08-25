@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Launcher/Launcher.unity
+- path: Assets/Scenes/Game/FNaF2/gameScene_2.unity
   isLoaded: 1
   isActive: 1

@@ -19,6 +19,20 @@ public class animatronic_2 : MonoBehaviour {
 	public string[] bbLocations;
 	public string[] marionetteLocations;
 
+	[Header("Cam arrays lit")]
+	public string[] stageCamsLit;
+	public string[] partsAndServiceCamsLit;
+	public string[] freddyLocationsLit;
+	public string[] bonnieLocationsLit;
+	public string[] chicaLocationsLit;
+	public string[] foxyLocationsLit;
+	public string[] toyFreddyLocationsLit;
+	public string[] toyBonnieLocationsLit;
+	public string[] toyChicaLocationsLit;
+	public string[] mangleLocationsLit;
+	public string[] bbLocationsLit;
+	public string[] marionetteLocationsLit;
+
 	[Header("jumpscare")]
 	public int whichJumpscare;
 
@@ -62,17 +76,35 @@ public class animatronic_2 : MonoBehaviour {
 	public Image staticOverlay;
 	public AudioSource move;
 
+	[Header("light information")]
+	public bool lit = false;
+
 	[Header("shared scripts")]
 	public timeScript timeScr;
 	public whichNight nightScr;
 	public officeScript_1_2_3 officeScr;
 	public cameraScript_1_2_3 camScr;
 	public musicbox_2 musicBoxScr;
+	public flashLight_2 flashlightScr;
 
 
 	void Start () {
 		StartCoroutine(startNight());
 	}
+
+	void Update()
+    {
+		if (flashlightScr.lightEnabled == true)
+        {
+			lit = true;
+        }
+        else
+        {
+			lit = false;
+        }
+
+		showLoopResultsInGame();
+    }
 	
 	void setDifficulty()
     {
@@ -233,7 +265,7 @@ public class animatronic_2 : MonoBehaviour {
 			freddyMoved = true;
 			freddyPos++;
 
-			StartCoroutine(showLoopResultsInGame());
+			//StartCoroutine(showLoopResultsInGame());
 		}
 	}
 
@@ -266,7 +298,7 @@ public class animatronic_2 : MonoBehaviour {
 			bonnieMoved = true;
 			bonniePos++;
 
-			StartCoroutine(showLoopResultsInGame());
+			//StartCoroutine(showLoopResultsInGame());
 		}
 	}
 
@@ -299,7 +331,7 @@ public class animatronic_2 : MonoBehaviour {
 			chicaMoved = true;
 			chicaPos++;
 
-			StartCoroutine(showLoopResultsInGame());
+			//StartCoroutine(showLoopResultsInGame());
 		}
 	}
 
@@ -332,7 +364,7 @@ public class animatronic_2 : MonoBehaviour {
 			foxyMoved = true;
 			foxyPos++;
 
-			StartCoroutine(showLoopResultsInGame());
+			//StartCoroutine(showLoopResultsInGame());
 		}
 	}
 
@@ -365,7 +397,7 @@ public class animatronic_2 : MonoBehaviour {
 			toyFreddyMoved = true;
 			toyFreddyPos++;
 
-			StartCoroutine(showLoopResultsInGame());
+			//StartCoroutine(showLoopResultsInGame());
 		}
 	}
 
@@ -398,7 +430,7 @@ public class animatronic_2 : MonoBehaviour {
 			toyBonnieMoved = true;
 			toyBonniePos++;
 
-			StartCoroutine(showLoopResultsInGame());
+			//StartCoroutine(showLoopResultsInGame());
 		}
 	}
 
@@ -431,7 +463,7 @@ public class animatronic_2 : MonoBehaviour {
 			toyChicaMoved = true;
 			toyChicaPos++;
 
-			StartCoroutine(showLoopResultsInGame());
+			//StartCoroutine(showLoopResultsInGame());
 		}
 	}
 
@@ -464,7 +496,7 @@ public class animatronic_2 : MonoBehaviour {
 			mangleMoved = true;
 			manglePos++;
 
-			StartCoroutine(showLoopResultsInGame());
+			//StartCoroutine(showLoopResultsInGame());
 		}
 	}
 
@@ -497,7 +529,7 @@ public class animatronic_2 : MonoBehaviour {
 			bbMoved = true;
 			bbPos++;
 
-			StartCoroutine(showLoopResultsInGame());
+			//StartCoroutine(showLoopResultsInGame());
 		}
 	}
 
@@ -530,11 +562,11 @@ public class animatronic_2 : MonoBehaviour {
 			marionetteMoved = true;
 			marionettePos++;
 
-			StartCoroutine(showLoopResultsInGame());
+			//StartCoroutine(showLoopResultsInGame());
 		}
 	}
 
-	IEnumerator showLoopResultsInGame()
+	void showLoopResultsInGame()
 	{
 
 		//clear all frames
@@ -708,7 +740,7 @@ public class animatronic_2 : MonoBehaviour {
 				move.Play();
 			}
 			camScr.switchCamera(camScr.whichCam);
-			yield return new WaitForSeconds(1.5f);
+			//yield return new WaitForSeconds(1.5f);
 			staticOverlay.color = normalColor;
 		}
 		
@@ -748,37 +780,44 @@ public class animatronic_2 : MonoBehaviour {
 			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCams[5]);
 			camScr.cams[0] = timelySprite;
 		}
+		*/
 
+		
 		if (toyBonniePos >= 1 && toyChicaPos <= 0)
 		{
-			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCams[0]);
-			camScr.cams[0] = timelySprite;
+			if (!lit)
+            {
+				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCams[0]);
+				camScr.cams[0] = timelySprite;
+			}
+            else
+            {
+				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCamsLit[0]);
+				camScr.cams[0] = timelySprite;
+			}
 		}
 		else if (toyBonniePos <= 0 && toyChicaPos >= 1)
 		{
-			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCams[1]);
-			camScr.cams[0] = timelySprite;
+			toyChicaPos = 0;
 		}
-
-		if (toyFreddyPos <= 0 && toyBonniePos >= 1 && toyChicaPos >= 1)
-		{
-			if (nightScr._whichNight < 5)
-			{
-				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCams[2]);
+		else if (toyBonniePos >= 1 && toyChicaPos >= 1)
+        {
+			if (!lit)
+            {
+				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCams[1]);
 				camScr.cams[0] = timelySprite;
 			}
-			else
-			{
-				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCams[3]);
+            else
+            {
+				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCamsLit[1]);
 				camScr.cams[0] = timelySprite;
 			}
 		}
 
 		if (toyFreddyPos >= 1 && toyBonniePos >= 1 && toyChicaPos >= 1)
 		{
-			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCams[4]);
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCams[2]);
 			camScr.cams[0] = timelySprite;
 		}
-		*/
 	}
 }

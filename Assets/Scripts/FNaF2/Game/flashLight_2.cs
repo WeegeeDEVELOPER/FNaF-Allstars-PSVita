@@ -10,6 +10,9 @@ public class flashLight_2 : MonoBehaviour {
 	public Sprite[] _officeSprites;
 	public AudioSource _lightBuzz;
 
+	[Header("information")]
+	public bool lightEnabled = false;
+
 	[Header("for the buttons")]
 	public Image _leftButton;
 	public Image _rightButton;
@@ -96,7 +99,9 @@ public class flashLight_2 : MonoBehaviour {
             {
 				Debug.Log("Cam light on");
 				camLightOn();
-            }
+
+				lightEnabled = true;
+			}
 		}
 		else if ((Input.GetKeyUp(KeyCode.JoystickButton0)) || (Input.GetKeyUp(KeyCode.X)))
 		{
@@ -108,6 +113,8 @@ public class flashLight_2 : MonoBehaviour {
             {
 				lightOff();
 				camLightOff();
+
+				lightEnabled = false;
 			}
 		}
 	}

@@ -29,6 +29,13 @@ public class musicbox_2 : MonoBehaviour {
 	public int maxSprites = 21;
 	
 	// Update is called once per frame
+
+	void Start()
+    {
+		musicBox.Play();
+		musicBox.volume = 0;
+	}
+
 	void Update () {
 		if (allowedToStart && !started)
         {
@@ -73,10 +80,7 @@ public class musicbox_2 : MonoBehaviour {
 			//audio part
 			if (camScript.specialProperty[camScript.whichCam] == "musicbox")
 			{
-				if (musicBox.isPlaying == false)
-				{
-					musicBox.Play();
-				}
+				musicBox.volume = 1;
 
 				windButton.SetActive(true);
 			}
@@ -84,7 +88,7 @@ public class musicbox_2 : MonoBehaviour {
 			{
 				if (musicBox != null)
 				{
-					musicBox.Stop();
+					musicBox.volume = 0;
 				}
 
 				windButton.SetActive(false);
@@ -94,7 +98,7 @@ public class musicbox_2 : MonoBehaviour {
 		{
 			if (musicBox.isPlaying == true)
 			{
-				musicBox.Stop();
+				musicBox.volume = 0;
 			}
 
 			windButton.SetActive(false);

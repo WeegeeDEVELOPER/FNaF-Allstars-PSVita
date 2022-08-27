@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 683, y: 492}
+  m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 41
+  controlID: 52
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -89,8 +89,8 @@ MonoBehaviour:
     y: 0
     width: 376
     height: 555
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -144,7 +144,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -207,10 +207,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 947
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 42
+  controlID: 53
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,10 +231,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 555
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 43
+  controlID: 54
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 14834
+  m_LastSelectedObjectID: 19868
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -774,20 +774,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/gfx/FNaF2/Game/Cameras/anni/09
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/gfx/FNaF2/Game/Cameras/anni/09
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity Projects\FNaF_AllStars_Vita\FNaF-Allstars-psvita-
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 1223}
-    m_SelectedIDs: 646c0000
-    m_LastClickedID: 27748
-    m_ExpandedIDs: 00000000202a00002c2a00004e2a0000842a0000902a0000c82a00001e2b0000242b0000c22b0000fe2b0000582c0000de2c0000e62c0000f42c00001a2d0000422d00005e2d0000bc2d00001c2e0000462e00005e2e0000602e0000622e00009e2e0000a02e0000a62e0000122f0000262f00006e2f0000a02f0000e62f0000a0300000b2300000023200005c320000aa320000e43200000233000036330000483300005c330000ae330000bc330000c8330000e63300004a3400007a340000d4340000fe34000044350000ae350000ba350000f0350000143600003a3600002e6c000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 222a0000
+    m_LastClickedID: 10786
+    m_ExpandedIDs: 00000000222a00002e2a0000502a0000862a0000922a0000ca2a0000222b0000282b0000c62b0000022c00005c2c0000e82c0000f02c0000fe2c0000242d00004e2d00006a2d0000c82d0000282e0000542e00006c2e00006e2e0000702e0000ae2e0000b02e0000b62e0000222f0000362f00007e2f0000b22f0000f82f000014300000b4300000c63000001632000070320000be320000fa320000183300004c3300005e33000072330000c4330000d2330000de330000fc3300006234000092340000ec340000163500005c350000c6350000d235000008360000303600005636000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -815,7 +815,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000202a00002c2a00004e2a0000842a0000902a0000c82a00001e2b0000242b0000c22b0000fe2b0000582c0000de2c0000e62c0000f42c00001a2d0000422d0000bc2d00001c2e0000462e00005e2e0000602e00009e2e0000a02e0000a62e0000122f0000262f00006e2f0000a02f0000e62f0000a0300000b2300000023200005c320000aa320000e43200000233000036330000483300005c330000ae330000bc330000c8330000e63300004a3400007a340000d4340000fe34000044350000ae350000ba350000f0350000143600003a360000
+    m_ExpandedIDs: 00000000222a00002e2a0000502a0000862a0000922a0000ca2a0000222b0000282b0000c62b0000022c00005c2c0000e82c0000f02c0000fe2c0000242d00004e2d00006a2d0000c82d0000282e0000542e00006c2e00006e2e0000702e0000ae2e0000b02e0000b62e0000222f0000362f00007e2f0000b22f0000f82f000014300000b4300000c63000001632000070320000be320000fa320000183300004c3300005e33000072330000c4330000d2330000de330000fc3300006234000092340000ec340000163500005c350000c6350000d2350000083600003036000056360000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -931,9 +931,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 54dbfdff3adcfdff7cddfdff80ddfdff84ddfdff88ddfdff8eddfdff94ddfdff9addfdff9eddfdffa2ddfdffa6ddfdffacddfdffb2ddfdffb8ddfdffbcddfdff24dffdff28dffdff2cdffdff30dffdff36dffdff3adffdff3edffdff44dffdff48dffdff56dffdff64dffdff76dffdff7cdffdff82dffdffd8f9ffffe4fbffff00000000f2380000ae390000083a0000343a0000803a00008e3a0000de3a0000f83a00004e3b0000
+    m_SelectedIDs: 9c4d0000
+    m_LastClickedID: 19868
+    m_ExpandedIDs: 7aa8fbffd4b2fbffe4fbffff000000000c390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

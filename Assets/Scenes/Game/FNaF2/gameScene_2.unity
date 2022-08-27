@@ -3233,6 +3233,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 05999951665019c4e857f29d7ca796e9, type: 3}
   - {fileID: 21300000, guid: d757b4a166636bf4999208d92e4e005e, type: 3}
   _lightBuzz: {fileID: 433778934}
+  lightEnabled: 0
   _leftButton: {fileID: 797913548}
   _rightButton: {fileID: 1298886090}
   _leftSprites:
@@ -3438,12 +3439,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stageCams:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - 09/177
+  - 09/179
+  - 09/499
   partsAndServiceCams: []
   freddyLocations: []
   bonnieLocations: []
@@ -3455,6 +3453,21 @@ MonoBehaviour:
   mangleLocations: []
   bbLocations: []
   marionetteLocations: []
+  stageCamsLit:
+  - 09/178
+  - 09/180
+  - 09/499
+  partsAndServiceCamsLit: []
+  freddyLocationsLit: []
+  bonnieLocationsLit: []
+  chicaLocationsLit: []
+  foxyLocationsLit: []
+  toyFreddyLocationsLit: []
+  toyBonnieLocationsLit: []
+  toyChicaLocationsLit: []
+  mangleLocationsLit: []
+  bbLocationsLit: []
+  marionetteLocationsLit: []
   whichJumpscare: 0
   freddyPos: 0
   bonniePos: 0
@@ -3490,11 +3503,13 @@ MonoBehaviour:
   normalColor: {r: 1, g: 1, b: 1, a: 1}
   staticOverlay: {fileID: 1690176293}
   move: {fileID: 695749690}
+  lit: 0
   timeScr: {fileID: 936125901}
   nightScr: {fileID: 936125897}
   officeScr: {fileID: 936125893}
   camScr: {fileID: 936125900}
   musicBoxScr: {fileID: 936125903}
+  flashlightScr: {fileID: 936125896}
 --- !u!114 &936125903
 MonoBehaviour:
   m_ObjectHideFlags: 0

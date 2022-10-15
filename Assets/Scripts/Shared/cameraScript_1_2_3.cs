@@ -42,6 +42,7 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 
 	[Header("Fnaf 2 specific stuff")]
 	public bool fnaf2;
+	public Sprite[] camsBackupUnlit;
 	public mask_2 maskScript;
 	/*
 	public AudioSource musicBox;
@@ -121,6 +122,19 @@ public class cameraScript_1_2_3 : MonoBehaviour {
 		for (int i = 0; i < cams.Length; i++)
 		{
 			camsBackup[i] = cams[i];
+		}
+		
+		if (fnaf2)
+        {
+			SaveCamArray();
+		}
+	}
+
+	public void SaveCamArray()
+    {
+		for (int i = 0; i < cams.Length; i++)
+		{
+			camsBackupUnlit[i] = cams[i];
 		}
 	}
 

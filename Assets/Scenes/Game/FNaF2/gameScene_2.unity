@@ -3395,6 +3395,19 @@ MonoBehaviour:
   - musicbox
   - 
   fnaf2: 1
+  camsBackupUnlit:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   maskScript: {fileID: 936125899}
   fnaf3: 0
   map: {fileID: 0}
@@ -3499,8 +3512,8 @@ MonoBehaviour:
   mangleMoved: 0
   bbMoved: 0
   marionetteMoved: 0
-  fxColor: {r: 1, g: 1, b: 1, a: 0.39215687}
-  normalColor: {r: 1, g: 1, b: 1, a: 1}
+  fxColor: {r: 1, g: 1, b: 1, a: 1}
+  normalColor: {r: 1, g: 1, b: 1, a: 0.39215687}
   staticOverlay: {fileID: 1690176293}
   move: {fileID: 695749690}
   lit: 0

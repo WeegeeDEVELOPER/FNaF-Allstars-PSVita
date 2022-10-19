@@ -42,10 +42,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 492}
+  m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 11
+  controlID: 62
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -207,10 +207,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 947
-  m_MinSize: {x: 404, y: 492}
+  m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 12
+  controlID: 117
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -231,10 +231,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 555
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 122
+  controlID: 118
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -774,34 +774,34 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts/FNaF1/Game
+    - Assets/Resources/gfx/FNaF2/Game/Office
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts/FNaF1/Game
+  - Assets/Resources/gfx/FNaF2/Game/Office
   m_LastFoldersGridSize: -1
   m_LastProjectPath: D:\Unity Projects\FNaF_AllStars_Vita\FNaF-Allstars-psvita-
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 2286}
-    m_SelectedIDs: 9c300000
-    m_LastClickedID: 12444
-    m_ExpandedIDs: 00000000222a00002e2a0000502a0000862a0000922a0000ca2a0000242b00002a2b0000ca2b0000062c0000602c0000ee2c0000f62c0000042d00002a2d0000542d0000702d0000d02d0000342e0000602e00007a2e00007c2e00007e2e0000bc2e0000be2e0000c42e00001a2f0000322f0000482f0000922f0000ca2f00001830000034300000d8300000ea30000048320000a4320000f832000034330000563300008e330000a0330000b83300000a340000183400002434000044340000b0340000e03400003a35000064350000aa35000014360000203600005836000080360000a636000000ca9a3b
+    scrollPos: {x: 0, y: 382}
+    m_SelectedIDs: 2e2a0000
+    m_LastClickedID: 10798
+    m_ExpandedIDs: 00000000222a00002e2a0000502a0000862a0000922a00002a2b0000ca2b0000062c0000602c0000ee2c0000f62c0000042d00002a2d0000542d0000342e0000602e00007a2e00007c2e00007e2e0000bc2e0000be2e0000c42e00001a2f0000322f0000482f0000922f0000ca2f00001830000034300000d8300000ea30000048320000a4320000f8320000563300008e330000a0330000b83300000a340000183400002434000044340000b0340000e03400003a350000aa35000020360000583600008036000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: 04
+      m_OriginalName: 04
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 13936
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -843,7 +843,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000340c0000e63100008a3d000000000000f8330000402f0000162b0000042d0000f033000042330000d42c0000ec3400005c3400006633000024350000aa2c0000
+    m_ExpandedInstanceIDs: c6230000340c0000e63100008a3d000000000000f8330000402f0000042d0000f033000042330000d42c0000ec3400005c3400006633000024350000aa2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -933,21 +933,21 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: f68afdffe08bfdff228dfdff268dfdff2a8dfdff2e8dfdff348dfdff3a8dfdff408dfdff448dfdff488dfdff4c8dfdff528dfdff588dfdff5e8dfdff628dfdffca8efdffce8efdffd28efdffd68efdffdc8efdffe08efdffe48efdffea8efdffee8efdfffc8efdff0a8ffdff1c8ffdff228ffdff288ffdffe4fbffff00000000
+    m_ExpandedIDs: e4fbffff0000000084390000a2390000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: wind
+      m_OriginalName: wind
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 14174
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 

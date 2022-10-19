@@ -114,13 +114,6 @@ public class animatronic_2 : MonoBehaviour {
         {
 			lit = false;
         }
-
-		if (!lit)
-		{
-			camScr.SaveCamArray();
-		}
-
-		//setStageImages();
 	}
 	
 	void setDifficulty()
@@ -603,6 +596,12 @@ public class animatronic_2 : MonoBehaviour {
 		double rand = System.Math.Round(UnityEngine.Random.Range(0f, 20f));
 		rand++;
 		Debug.Log("marionette random number = " + rand);
+
+		if (musicBoxScr.spriteCounter == musicBoxScr.maxSprites)
+        {
+			marionetteLevel += 4;
+        }
+
 		if (marionetteLevel >= rand && musicBoxScr.spriteCounter == musicBoxScr.maxSprites)
 		{
 			/*
@@ -640,14 +639,15 @@ public class animatronic_2 : MonoBehaviour {
 
 	IEnumerator showLoopResultsInGame()
 	{
-
-		//clear all frames
-		for (int i = 0; i < camScr.cams.Length; i++)
+		for (int i = 0; i < camScr.camsBackup.Length; i++)
 		{
 			camScr.cams[i] = camScr.camsBackup[i];
 		}
+		for (int i = 0; i < camScr.camsBackupLit.Length; i++)
+        {
+			flashlightScr.camsLit[i] = camScr.camsBackupLit[i];
+		}
 
-		//setDoorImages();
 		setStageImages();
 		setPartsAndServiceImages();
 		setPrizeCounterImages();
@@ -958,6 +958,13 @@ public class animatronic_2 : MonoBehaviour {
 			flashlightScr.camsLit[7] = timelySprite2;
 
 
+		}
+		if (freddyPos >= 1 && bonniePos >= 1 && chicaPos >= 1 && foxyPos >= 2)
+		{
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + partsAndServiceCams[0]);
+			camScr.cams[7] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + partsAndServiceCams[0]);
+			flashlightScr.camsLit[7] = timelySprite2;
 		}
 	}
 

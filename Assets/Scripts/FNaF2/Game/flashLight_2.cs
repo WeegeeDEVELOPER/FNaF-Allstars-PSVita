@@ -62,8 +62,8 @@ public class flashLight_2 : MonoBehaviour {
     {
 		for (int i = 0; i < camScript.cams.Length; i++)
         {
-			camScript.cams[i] = camsLit[i];
-			camScript.camScreenImg.sprite = camScript.cams[camScript.whichCam];
+			//camScript.cams[i] = camsLit[i];
+			camScript.camScreenImg.sprite = camsLit[camScript.whichCam];
 		}
     }
 
@@ -71,7 +71,7 @@ public class flashLight_2 : MonoBehaviour {
     {
 		for (int i = 0; i < camScript.cams.Length; i++)
 		{
-			camScript.cams[i] = camScript.camsBackupUnlit[i];
+			//camScript.cams[i] = camScript.cams[i];
 			camScript.camScreenImg.sprite = camScript.cams[camScript.whichCam];
 		}
 	}

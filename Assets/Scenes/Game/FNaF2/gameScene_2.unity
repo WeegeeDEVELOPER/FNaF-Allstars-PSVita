@@ -3767,7 +3767,7 @@ MonoBehaviour:
   - musicbox
   - 
   fnaf2: 1
-  camsBackupUnlit:
+  camsBackupLit:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -3792,6 +3792,7 @@ MonoBehaviour:
   camIdMap1: 0
   camIdMap2: 0
   officeScript: {fileID: 936125893}
+  flashlightScrTwo: {fileID: 936125896}
 --- !u!114 &936125901
 MonoBehaviour:
   m_ObjectHideFlags: 0

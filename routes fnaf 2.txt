@@ -1,0 +1,10 @@
+Freddy = hallway -> party room 03 -> office hallway close -> in office
+Bonnie = hallway -> office hallway far -> party room 01 -> vent -> in office
+Chica = party room 04 -> party room 03 -> vent -> in office
+Foxy = office hallway far
+
+Toy Freddy = game area -> office hallway far -> office hallway close -> in office
+Toy Bonnie = party room 03 -> party room 02 -> vent -> in office
+Toy Chica = hallway -> office hallway far -> party room 04 -> office hallway close -> party room 02 -> vent -> in office
+
+WIP

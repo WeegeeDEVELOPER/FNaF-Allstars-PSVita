@@ -140,6 +140,7 @@ RectTransform:
   m_Children:
   - {fileID: 889959400}
   - {fileID: 34503866}
+  - {fileID: 2038284543}
   - {fileID: 1096170558}
   m_Father: {fileID: 1977962009}
   m_RootOrder: 0
@@ -1275,6 +1276,94 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 360116964}
+  m_CullTransparentMesh: 0
+--- !u!1 &396021423
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 396021424}
+  - component: {fileID: 396021427}
+  - component: {fileID: 396021426}
+  - component: {fileID: 396021425}
+  m_Layer: 5
+  m_Name: toyFreddy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &396021424
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396021423}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2038284543}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -812, y: 0}
+  m_SizeDelta: {x: 258.5, y: 387.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &396021425
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396021423}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df3362602d354e54888e261a618c987b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &396021426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396021423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 48a0cfacef79cd04988f12af5ac9df2c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &396021427
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 396021423}
   m_CullTransparentMesh: 0
 --- !u!1 &401362573
 GameObject:
@@ -3008,6 +3097,94 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 774441644}
   m_CullTransparentMesh: 0
+--- !u!1 &787785780
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 787785781}
+  - component: {fileID: 787785784}
+  - component: {fileID: 787785783}
+  - component: {fileID: 787785782}
+  m_Layer: 5
+  m_Name: bb
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &787785781
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787785780}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2038284543}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -349, y: -93}
+  m_SizeDelta: {x: 208.3, y: 276.8}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!95 &787785782
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787785780}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: df3362602d354e54888e261a618c987b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &787785783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787785780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 823d976e3cd451c40a693bcf5bc1123c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+--- !u!222 &787785784
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787785780}
+  m_CullTransparentMesh: 0
 --- !u!1 &797913546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3954,12 +4131,32 @@ MonoBehaviour:
   - 09/499
   partsAndServiceCams:
   - 08/38
-  freddyLocations: []
-  bonnieLocations: []
-  chicaLocations: []
-  foxyLocations: []
-  toyFreddyLocations: []
-  toyBonnieLocations: []
+  freddyLocations:
+  - 07/53
+  - 03/210
+  - 634
+  - 75
+  bonnieLocations:
+  - 07/53
+  - 197
+  - 01/176
+  - 05/41
+  - 200
+  chicaLocations:
+  - 04/45
+  - 02/204
+  - 05/35
+  - 208
+  foxyLocations:
+  - 634
+  - 634
+  - 634
+  toyFreddyLocations:
+  - 10/43
+  - 634
+  - 634
+  toyBonnieLocations:
+  - 
   toyChicaLocations: []
   mangleLocations: []
   bbLocations: []
@@ -3974,12 +4171,34 @@ MonoBehaviour:
   - 08/202
   - 08/203
   - 08/209
-  freddyLocationsLit: []
-  bonnieLocationsLit: []
-  chicaLocationsLit: []
-  foxyLocationsLit: []
-  toyFreddyLocationsLit: []
-  toyBonnieLocationsLit: []
+  freddyLocationsLit:
+  - 07/213
+  - 03/214
+  - 212
+  - 75
+  bonnieLocationsLit:
+  - 07/195
+  - 634
+  - 01/198
+  - 05/199
+  - 200
+  chicaLocationsLit:
+  - 04/206
+  - 02/205
+  - 05/207
+  - 208
+  foxyLocationsLit:
+  - 212
+  - 600
+  - 601
+  toyFreddyLocationsLit:
+  - 10/511
+  - 193
+  - 194
+  toyBonnieLocationsLit:
+  - 03/86
+  - 02/182
+  - 06/183
   toyChicaLocationsLit: []
   mangleLocationsLit: []
   bbLocationsLit: []
@@ -3987,6 +4206,39 @@ MonoBehaviour:
   - 11/70
   - 11/72
   - 11/73
+  freddyLocationType:
+  - camera
+  - camera
+  - office
+  - office
+  bonnieLocationType:
+  - camera
+  - office
+  - camera
+  - camera
+  - office
+  chicaLocationType:
+  - camera
+  - camera
+  - camera
+  - office
+  foxyLocationType:
+  - office
+  - office
+  - office
+  toyFreddyLocationType:
+  - camera
+  - office
+  - office
+  - freddy
+  toyBonnieLocationType:
+  - camera
+  - camera
+  - camera
+  toyChicaLocationType: []
+  mangleLocationType: []
+  bbLocationType: []
+  marionetteLocationType: []
   whichJumpscare: 0
   freddyPos: 0
   bonniePos: 0
@@ -4801,7 +5053,7 @@ RectTransform:
   m_Children:
   - {fileID: 1382888689}
   m_Father: {fileID: 20284732}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8765,6 +9017,49 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2037953596}
+  m_CullTransparentMesh: 0
+--- !u!1 &2038284542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2038284543}
+  - component: {fileID: 2038284544}
+  m_Layer: 5
+  m_Name: animatronics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2038284543
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038284542}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 396021424}
+  - {fileID: 787785781}
+  m_Father: {fileID: 20284732}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1360, y: 544}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &2038284544
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2038284542}
   m_CullTransparentMesh: 0
 --- !u!1 &2066644842
 GameObject:

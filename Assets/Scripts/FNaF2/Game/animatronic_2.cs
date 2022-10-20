@@ -35,6 +35,18 @@ public class animatronic_2 : MonoBehaviour {
 	public string[] bbLocationsLit;
 	public string[] marionetteLocationsLit;
 
+	[Header("location types")]
+	public string[] freddyLocationType;
+	public string[] bonnieLocationType;
+	public string[] chicaLocationType;
+	public string[] foxyLocationType;
+	public string[] toyFreddyLocationType;
+	public string[] toyBonnieLocationType;
+	public string[] toyChicaLocationType;
+	public string[] mangleLocationType;
+	public string[] bbLocationType;
+	public string[] marionetteLocationType;
+
 	[Header("jumpscare")]
 	public int whichJumpscare;
 

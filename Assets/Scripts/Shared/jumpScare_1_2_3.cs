@@ -29,7 +29,7 @@ public class jumpScare_1_2_3 : MonoBehaviour {
 		}
         else
         {
-			yield return new WaitForSeconds(0.3f);
+			yield return new WaitForSeconds(0.4f);
 		}
 
 		SceneManager.LoadSceneAsync("static_" + whichGame.ToString());

@@ -13,6 +13,12 @@ public class flashLight_2 : MonoBehaviour {
 	[Header("information")]
 	public bool lightEnabled = false;
 
+	[Header("battery")]
+	public float battery = 200;
+	public Image batteryIndicator;
+	public Sprite[] indications;
+	public AudioSource clickSoundEmpty;
+
 	[Header("for the buttons")]
 	public Image _leftButton;
 	public Image _rightButton;
@@ -78,7 +84,7 @@ public class flashLight_2 : MonoBehaviour {
 
 
 	void useLight () {
-		if ((Input.GetKeyDown(KeyCode.JoystickButton0)) || (Input.GetKeyDown(KeyCode.X)) && maskScript.isOn == false)
+		if ((Input.GetKeyDown(KeyCode.JoystickButton0)) || (Input.GetKeyDown(KeyCode.X)) && maskScript.isOn == false && (battery != 0))
         {
 			if (_officeScript.currentLimit == _officeScript.camLimit[1] && camScript.isOn == false)
 			{
@@ -103,6 +109,10 @@ public class flashLight_2 : MonoBehaviour {
 				lightEnabled = true;
 			}
 		}
+		else if ((Input.GetKeyDown(KeyCode.JoystickButton0)) || (Input.GetKeyDown(KeyCode.X)) && maskScript.isOn == false && (battery == 0))
+		{
+			clickSoundEmpty.Play();
+		}
 		else if ((Input.GetKeyUp(KeyCode.JoystickButton0)) || (Input.GetKeyUp(KeyCode.X)))
 		{
 			if (camScript.isOn == false)
@@ -117,7 +127,38 @@ public class flashLight_2 : MonoBehaviour {
 				lightEnabled = false;
 			}
 		}
+
+		if ((Input.GetKey(KeyCode.JoystickButton0)) || (Input.GetKey(KeyCode.X)) && maskScript.isOn == false && (battery != 0))
+        {
+			DrainBattery();
+        }
 	}
+
+	void DrainBattery()
+    {
+		battery -= 1.2f * Time.deltaTime;
+		
+		if (battery > 150)
+		{
+			batteryIndicator.sprite = indications[0];
+		}
+		else if (battery > 100 && battery <= 150)
+		{
+			batteryIndicator.sprite = indications[1];
+		}
+		else if (battery > 50 && battery <= 100)
+		{
+			batteryIndicator.sprite = indications[2];
+		}
+		else if (battery > 0 && battery <= 50)
+		{
+			batteryIndicator.sprite = indications[3];
+		}
+		else if (battery == 0)
+        {
+			batteryIndicator.sprite = indications[4];
+		}
+    }
 	
 	void Update () {
 		useLight();

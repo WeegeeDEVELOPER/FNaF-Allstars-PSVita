@@ -1277,6 +1277,130 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 360116964}
   m_CullTransparentMesh: 0
+--- !u!1 &365751101
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 365751102}
+  - component: {fileID: 365751103}
+  m_Layer: 0
+  m_Name: clickEmpty
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &365751102
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 365751101}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1610129234}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &365751103
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 365751101}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: dffab25a13f726e4f8c546d0c781565b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &396021423
 GameObject:
   m_ObjectHideFlags: 0
@@ -3907,6 +4031,15 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d757b4a166636bf4999208d92e4e005e, type: 3}
   _lightBuzz: {fileID: 433778934}
   lightEnabled: 0
+  battery: 200
+  batteryIndicator: {fileID: 1567028577}
+  indications:
+  - {fileID: 21300000, guid: e8b56e5e10e01154eb80d4c316419319, type: 3}
+  - {fileID: 21300000, guid: 6a7f3ac0a8ad9d046b65740f15ad03d2, type: 3}
+  - {fileID: 21300000, guid: d36e61fc46e6bcb4d9bcd15108b2e244, type: 3}
+  - {fileID: 21300000, guid: 5caa975a39917a34c9f798fe3c659729, type: 3}
+  - {fileID: 21300000, guid: 5d6cf77292b97be49a33dd64eb5ddd73, type: 3}
+  clickSoundEmpty: {fileID: 365751103}
   _leftButton: {fileID: 797913548}
   _rightButton: {fileID: 1298886090}
   _leftSprites:
@@ -4156,8 +4289,16 @@ MonoBehaviour:
   - 634
   - 634
   toyBonnieLocations:
+  - 03/83
+  - 02/81
+  - 06/33
+  toyChicaLocations:
   - 
-  toyChicaLocations: []
+  - 
+  - 
+  - 
+  - 
+  - 
   mangleLocations: []
   bbLocations: []
   marionetteLocations:
@@ -4199,7 +4340,13 @@ MonoBehaviour:
   - 03/86
   - 02/182
   - 06/183
-  toyChicaLocationsLit: []
+  toyChicaLocationsLit:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
   mangleLocationsLit: []
   bbLocationsLit: []
   marionetteLocationsLit:
@@ -7418,6 +7565,7 @@ Transform:
   - {fileID: 1602836398}
   - {fileID: 770368487}
   - {fileID: 124866843}
+  - {fileID: 365751102}
   m_Father: {fileID: 1794841469}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

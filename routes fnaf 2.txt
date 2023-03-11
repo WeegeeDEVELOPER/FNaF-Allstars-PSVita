@@ -8,3 +8,14 @@ Toy Bonnie = party room 03 -> party room 02 -> vent -> in office
 Toy Chica = hallway -> office hallway far -> party room 04 -> office hallway close -> party room 02 -> vent -> in office
 
 WIP
+
+FNAF 2 jumpscare ID's;
+t_bonnie = 0
+t_chica = 1
+t_freddy = 2
+mangle = 3
+marionette = 5
+bonnie = 6
+chica = 7
+freddy = 8
+foxy = 9

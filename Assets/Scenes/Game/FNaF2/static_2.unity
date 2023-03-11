@@ -156,7 +156,7 @@ MonoBehaviour:
   duration: 10
   staticImage: {fileID: 309895877}
   staticColor: {r: 1, g: 1, b: 1, a: 1}
-  whichGame: 1
+  whichGame: 2
 --- !u!1 &117784268
 GameObject:
   m_ObjectHideFlags: 0

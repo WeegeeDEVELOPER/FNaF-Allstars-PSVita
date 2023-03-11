@@ -664,6 +664,233 @@ public class animatronic_2 : MonoBehaviour {
 		setPartsAndServiceImages();
 		setPrizeCounterImages();
 
+        //---freddy---
+        //-> hallway
+        if (freddyPos == 1)
+        {
+            Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + freddyLocations[0]);
+            camScr.cams[6] = timelySprite;
+            Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + freddyLocationsLit[0]);
+            flashlightScr.camsLit[6] = timelySprite2;
+        }
+        //-> party room 03
+        else if (freddyPos == 2)
+        {
+            Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + freddyLocations[1]);
+            camScr.cams[2] = timelySprite;
+            Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + freddyLocationsLit[1]);
+            flashlightScr.camsLit[2] = timelySprite2;
+        }
+        //-> office hallway close
+        else if (freddyPos == 3)
+        {
+            //office sprite
+        }
+		//-> in office
+		else if (freddyPos == 4)
+		{
+			//office sprite
+		}
+
+		//---bonnie---
+		//-> hallway
+		if (bonniePos == 1)
+        {
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + bonnieLocations[0]);
+			camScr.cams[6] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + bonnieLocationsLit[0]);
+			flashlightScr.camsLit[6] = timelySprite2;
+		}
+		//-> office hallway far
+		else if (bonniePos == 2)
+        {
+			//office sprite
+		}
+		//-> party room 01
+		else if (bonniePos == 3)
+        {
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + bonnieLocations[2]);
+			camScr.cams[0] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + bonnieLocationsLit[2]);
+			flashlightScr.camsLit[0] = timelySprite2;
+
+			playVentAlarmAudio();
+		}
+		//-> vent
+		else if (bonniePos == 4)
+        {
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + bonnieLocations[3]);
+			camScr.cams[4] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + bonnieLocationsLit[3]);
+			flashlightScr.camsLit[4] = timelySprite2;
+		}
+		//-> in office vent
+		else if (bonniePos == 5)
+        {
+			//office sprite
+		}
+		//-> in office
+		else if (bonniePos == 6)
+		{
+			//office sprite
+		}
+
+		//---chica---
+		//-> party room 04
+		if (chicaPos == 1)
+        {
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + chicaLocations[0]);
+			camScr.cams[3] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + chicaLocationsLit[0]);
+			flashlightScr.camsLit[3] = timelySprite2;
+		}
+		//-> party room 03
+		else if (chicaPos == 2)
+        {
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + chicaLocations[1]);
+			camScr.cams[2] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + chicaLocationsLit[1]);
+			flashlightScr.camsLit[2] = timelySprite2;
+
+			playVentAlarmAudio();
+		}
+		//-> vent
+		else if (chicaPos == 3)
+        {
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + chicaLocations[2]);
+			camScr.cams[5] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + chicaLocationsLit[2]);
+			flashlightScr.camsLit[5] = timelySprite2;
+		}
+		//-> in office vent
+		else if (chicaPos == 4)
+		{
+			//office sprite
+		}
+		//-> in office
+		else if (chicaPos == 5)
+        {
+			//office sprite
+		}
+
+		//---toy freddy---
+		//-> game area
+		if (toyFreddyPos == 1)
+        {
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyFreddyLocations[0]);
+			camScr.cams[9] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyFreddyLocationsLit[0]);
+			flashlightScr.camsLit[9] = timelySprite2;
+		}
+		//-> office hallway far
+		else if (toyFreddyPos == 2)
+        {
+			//office sprite
+		}
+		//-> office hallway close
+		else if (toyFreddyPos == 3)
+        {
+			//office sprite
+		}
+		//-> in office
+		else if (toyFreddyPos == 4)
+        {
+			//office sprite
+		}
+
+		//---toy bonnie---
+		//-> party room 03
+		if (toyBonniePos == 1)
+        {
+			//Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocations[0]);
+			//camScr.cams[2] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocationsLit[0]);
+			flashlightScr.camsLit[2] = timelySprite2;
+		}
+		//-> party room 02
+		if (toyBonniePos == 2)
+		{
+			//Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocations[1]);
+			//camScr.cams[1] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocationsLit[1]);
+			flashlightScr.camsLit[1] = timelySprite2;
+
+			playVentAlarmAudio();
+		}
+		//-> vent
+		if (toyBonniePos == 3)
+		{
+			//Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocations[2]);
+			//camScr.cams[4] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocationsLit[2]);
+			flashlightScr.camsLit[4] = timelySprite2;
+		}
+		//-> in office vent
+		if (toyBonniePos == 4)
+		{
+			//office sprite
+		}
+		//-> in office
+		if (toyBonniePos == 5)
+		{
+			//office sprite
+		}
+
+		//---toy chica---
+		//-> hallway
+		if (toyChicaPos == 1)
+        {
+			//Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyChicaLocations[0]);
+			//camScr.cams[6] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyChicaLocationsLit[0]);
+			flashlightScr.camsLit[6] = timelySprite2;
+		}
+		//-> office hallway far
+		if (toyChicaPos == 2)
+		{
+			//office sprite
+		}
+		//-> party room 04
+		if (toyChicaPos == 3)
+		{
+			//Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyChicaLocations[1]);
+			//camScr.cams[3] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyChicaLocationsLit[1]);
+			flashlightScr.camsLit[3] = timelySprite2;
+		}
+		//-> office hallway close
+		if (toyChicaPos == 4)
+		{
+			//office sprite
+		}
+		//-> party room 02
+		if (toyChicaPos == 5)
+		{
+			//Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyChicaLocations[2]);
+			//camScr.cams[1] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyChicaLocationsLit[2]);
+			flashlightScr.camsLit[1] = timelySprite2;
+		}
+		//-> vent 
+		if (toyChicaPos == 6)
+		{
+			//Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyChicaLocations[3]);
+			//camScr.cams[5] = timelySprite;
+			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyChicaLocationsLit[3]);
+			flashlightScr.camsLit[5] = timelySprite2;
+		}
+		//-> in office vent 
+		if (toyChicaPos == 7)
+		{
+			//office sprite
+		}
+		//-> in office
+		if (toyChicaPos == 8)
+		{
+			//office sprite
+		}
+
+
 		/*
 		if (freddyMoved)
 		{
@@ -817,7 +1044,7 @@ public class animatronic_2 : MonoBehaviour {
 		}
 
 		*/
-		
+
 		if (freddyMoved || bonnieMoved || chicaMoved || foxyMoved || toyFreddyMoved || toyChicaMoved || toyBonnieMoved || mangleMoved || bbMoved || marionetteMoved)
 		{
 			staticOverlay.color = fxColor;
@@ -858,7 +1085,10 @@ public class animatronic_2 : MonoBehaviour {
 
 	void playVentAlarmAudio()
     {
-		hallwaySfxPlayer.Play();
+		if (hallwaySfxPlayer.isPlaying == false)
+        {
+			hallwaySfxPlayer.Play();
+		}
     }
 	void stopVentAlarmAudio()
     {
@@ -1012,7 +1242,25 @@ public class animatronic_2 : MonoBehaviour {
 				musicBoxScr.musicBox.enabled = false;
 
 				playMarionetteAudio();
+
+				StartCoroutine(startWaitingForMarionetteJumpscare());
 			}
 		}
+	}
+
+	IEnumerator startWaitingForMarionetteJumpscare()
+    {
+		yield return new WaitForSeconds(Random.Range(10, 20));
+		whichJumpscare = 4;
+		startJumpscare(whichJumpscare);
+	}
+
+	void startJumpscare(int jumpscareID)
+	{
+		PlayerPrefs.SetInt("prev_jumpscare_game:" + nightScr._whichGame.ToString(), jumpscareID);
+		PlayerPrefs.Save();
+
+		SceneManager.LoadSceneAsync("jumpScare_" + nightScr._whichGame.ToString(), LoadSceneMode.Additive);
+
 	}
 }

@@ -669,8 +669,6 @@ MonoBehaviour:
 
     <b>></b> next
 
-    <b>^</b> ach.
-
     <b>x</b> play'
 --- !u!222 &559081262
 CanvasRenderer:
@@ -1967,7 +1965,7 @@ MonoBehaviour:
     <size=11>Thank you for all these years!</size><size=13>
 
 
-    <b>BasDEV</b> (All-Stars Creator)
+    <b>WeegeeDEV</b> (All-Stars Creator)
 
     <b>hatoving</b> (Additonal Stuff)
 
@@ -2123,8 +2121,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 596.44, y: 164.3}
-  m_SizeDelta: {x: 232.1, y: 227.2}
+  m_AnchoredPosition: {x: 596.44, y: 138.95001}
+  m_SizeDelta: {x: 232.1, y: 277.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1939321397
 MonoBehaviour:
@@ -2227,7 +2225,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: by BasDEV (& hatoving)
+  m_Text: by WeegeeDEV (& hatoving)
 --- !u!222 &1974184969
 CanvasRenderer:
   m_ObjectHideFlags: 0

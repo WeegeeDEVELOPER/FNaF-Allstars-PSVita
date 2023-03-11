@@ -79,6 +79,11 @@ public class menuSelection : MonoBehaviour {
 			_states[3] = PlayerPrefs.GetString("gss_game:" + _gameType.ToString() + "_var:" + (3).ToString());
 		}
 
+		if (PlayerPrefs.GetInt("save_game:" + _gameType.ToString()) > 5)
+        {
+			PlayerPrefs.SetInt("save_game:" + _gameType.ToString(), 5);
+        }
+
 		whichNight = PlayerPrefs.GetInt("save_game:" + _gameType.ToString());
 	}
 

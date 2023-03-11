@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: BasDEV
+  companyName: WeegeeDEV
   productName: FNaF_AllStars_Vita
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -487,7 +487,7 @@ PlayerSettings:
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules: []
   monoEnv: 
-  psp2Splashimage: {fileID: 2800000, guid: da3cffe80c609f340a2ca1771021b1a1, type: 3}
+  psp2Splashimage: {fileID: 2800000, guid: 3388e7b9ea8860f4ab9a901f30ec56ea, type: 3}
   psp2NPTrophyPackPath: 
   psp2NPSupportGBMorGJP: 0
   psp2NPAgeRating: 12

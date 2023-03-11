@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Game/FNaF2/gameScene_2.unity
+- path: Assets/Scenes/Game/FNaF2/jumpScare_2.unity
   isLoaded: 1
   isActive: 1

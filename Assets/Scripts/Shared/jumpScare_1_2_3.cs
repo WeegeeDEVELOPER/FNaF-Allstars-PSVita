@@ -23,7 +23,14 @@ public class jumpScare_1_2_3 : MonoBehaviour {
 
 	IEnumerator jumpScareTimer()
     {
-		yield return new WaitForSeconds(1.5f);
+		if (whichGame != 2 && whichGame != 3 && whichGame != 4)
+        {
+			yield return new WaitForSeconds(1.5f);
+		}
+        else
+        {
+			yield return new WaitForSeconds(0.3f);
+		}
 
 		SceneManager.LoadSceneAsync("static_" + whichGame.ToString());
     }

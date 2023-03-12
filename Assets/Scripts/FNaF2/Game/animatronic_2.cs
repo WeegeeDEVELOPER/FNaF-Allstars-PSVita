@@ -10,6 +10,7 @@ public class animatronic_2 : MonoBehaviour {
 	[Header("Cam arrays")]
 	public string[] stageCams;
 	public string[] partsAndServiceCams;
+	public string[] gameAreaCams;
 	public string[] freddyLocations;
 	public string[] bonnieLocations;
 	public string[] chicaLocations;
@@ -24,6 +25,7 @@ public class animatronic_2 : MonoBehaviour {
 	[Header("Cam arrays lit")]
 	public string[] stageCamsLit;
 	public string[] partsAndServiceCamsLit;
+	public string[] gameAreaCamsLit;
 	public string[] freddyLocationsLit;
 	public string[] bonnieLocationsLit;
 	public string[] chicaLocationsLit;
@@ -660,9 +662,10 @@ public class animatronic_2 : MonoBehaviour {
 			flashlightScr.camsLit[i] = camScr.camsBackupLit[i];
 		}
 
-		setStageImages();
-		setPartsAndServiceImages();
-		setPrizeCounterImages();
+		bool stageMovement = setStageImages();
+		bool pAsMovement = setPartsAndServiceImages();
+		bool prizeCounterMovement = setPrizeCounterImages();
+		bool balloonBoyMovement = setBalloonBoyImages();
 
         //---freddy---
         //-> hallway
@@ -777,10 +780,20 @@ public class animatronic_2 : MonoBehaviour {
 		//-> game area
 		if (toyFreddyPos == 1)
         {
-			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyFreddyLocations[0]);
-			camScr.cams[9] = timelySprite;
-			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyFreddyLocationsLit[0]);
-			flashlightScr.camsLit[9] = timelySprite2;
+			if (bbPos < 1)
+            {
+				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyFreddyLocations[0]);
+				camScr.cams[9] = timelySprite;
+				Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyFreddyLocationsLit[0]);
+				flashlightScr.camsLit[9] = timelySprite2;
+			}
+            else
+            {
+				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + gameAreaCams[1]);
+				camScr.cams[9] = timelySprite;
+				Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + gameAreaCamsLit[1]);
+				flashlightScr.camsLit[9] = timelySprite2;
+			}
 		}
 		//-> office hallway far
 		else if (toyFreddyPos == 2)
@@ -799,19 +812,34 @@ public class animatronic_2 : MonoBehaviour {
 		}
 
 		//---toy bonnie---
-		//-> party room 03
+		//-> party room 03 or -> party room 04 (RNG based)
 		if (toyBonniePos == 1)
         {
-			//Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocations[0]);
-			//camScr.cams[2] = timelySprite;
-			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocationsLit[0]);
-			flashlightScr.camsLit[2] = timelySprite2;
+			double i = Random.Range(0, 50);
+
+			if (i < 35)
+            {
+				//pr3
+				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/empty/" + toyBonnieLocations[0]);
+				camScr.cams[2] = timelySprite;
+				Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocationsLit[0]);
+				flashlightScr.camsLit[2] = timelySprite2;
+			}
+            else
+            {
+				//pr4
+				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocations[3]);
+				camScr.cams[3] = timelySprite;
+				Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocationsLit[3]);
+				flashlightScr.camsLit[3] = timelySprite2;
+			}
+			
 		}
 		//-> party room 02
 		if (toyBonniePos == 2)
 		{
-			//Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocations[1]);
-			//camScr.cams[1] = timelySprite;
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/empty/" + toyBonnieLocations[1]);
+			camScr.cams[1] = timelySprite;
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocationsLit[1]);
 			flashlightScr.camsLit[1] = timelySprite2;
 
@@ -820,10 +848,10 @@ public class animatronic_2 : MonoBehaviour {
 		//-> vent
 		if (toyBonniePos == 3)
 		{
-			//Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocations[2]);
-			//camScr.cams[4] = timelySprite;
+			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/empty/" + toyBonnieLocations[2]);
+			camScr.cams[5] = timelySprite;
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + toyBonnieLocationsLit[2]);
-			flashlightScr.camsLit[4] = timelySprite2;
+			flashlightScr.camsLit[5] = timelySprite2;
 		}
 		//-> in office vent
 		if (toyBonniePos == 4)
@@ -890,162 +918,14 @@ public class animatronic_2 : MonoBehaviour {
 			//office sprite
 		}
 
+		//---balloon boy---
+		//-> 
+		//-> party room
+		//-> vent
+		//-> in office vent
+		//-> in office
 
-		/*
-		if (freddyMoved)
-		{
-			playFreddyLaugh();
-		}
-
-		//freddy
-		if (freddyPos == 1)
-		{
-			camScr.cams[1] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + freddyLocations[1]);
-		}
-		else if (freddyPos == 2)
-		{
-			camScr.cams[10] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + freddyLocations[2]);
-		}
-		else if (freddyPos == 3)
-		{
-			camScr.cams[6] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + freddyLocations[3]);
-		}
-		else if (freddyPos == 4)
-		{
-			camScr.cams[7] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + freddyLocations[4]);
-		}
-		else if (freddyPos >= 5)
-		{
-			freddyPos = 5;
-			freddyAtDoor = true;
-		}
-
-		//bonnie
-		if (bonniePos == 1)
-		{
-			camScr.cams[1] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + bonnieLocations[1]);
-		}
-		else if (bonniePos == 2)
-		{
-			camScr.cams[1] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + bonnieLocations[2]);
-		}
-		else if (bonniePos == 3)
-		{
-			if (nightScr._whichNight >= 2 && nightScr._whichNight < 5)
-			{
-				camScr.cams[8] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + bonnieLocations[6]);
-			}
-			else if (nightScr._whichNight >= 5)
-			{
-				camScr.cams[8] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + bonnieLocations[7]);
-			}
-			else
-			{
-				bonniePos = 4;
-			}
-		}
-		else if (bonniePos == 4)
-		{
-			camScr.cams[3] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + bonnieLocations[3]);
-		}
-		else if (bonniePos == 5)
-		{
-			camScr.cams[5] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + bonnieLocations[5]);
-		}
-		else if (bonniePos == 6)
-		{
-			camScr.cams[4] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + bonnieLocations[4]);
-		}
-		else if (bonniePos >= 7)
-		{
-			bonniePos = 7;
-			if (!hallWaySfxPlayer.isPlaying && bonnieAtDoor == false)
-				playWalkAudio();
-			bonnieAtDoor = true;
-		}
-
-		//chica
-		if (chicaPos == 1)
-		{
-			camScr.cams[1] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + chicaLocations[1]);
-		}
-		else if (chicaPos == 2)
-		{
-			camScr.cams[1] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + chicaLocations[2]);
-		}
-		else if (chicaPos == 3)
-		{
-			if (nightScr._whichNight <= 3)
-			{
-				camScr.cams[10] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + chicaLocations[6]);
-			}
-			else
-			{
-				chicaPos = 5;
-			}
-		}
-		else if (chicaPos == 4)
-		{
-			double randChoice = System.Math.Round(UnityEngine.Random.Range(0f, 1f));
-			if (randChoice == 0)
-			{
-				camScr.cams[10] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + chicaLocations[7]);
-			}
-			else
-			{
-				StartCoroutine(chicaKitchen());
-			}
-
-		}
-		else if (chicaPos == 5)
-		{
-			camScr.cams[6] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + chicaLocations[3]);
-		}
-		else if (chicaPos == 6)
-		{
-			camScr.cams[6] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + chicaLocations[4]);
-		}
-		else if (chicaPos == 7)
-		{
-			camScr.cams[7] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + chicaLocations[5]);
-		}
-		else if (chicaPos >= 8)
-		{
-			chicaPos = 8;
-			if (!hallWaySfxPlayer.isPlaying && chicaAtDoor == false)
-				playWalkAudio();
-			chicaAtDoor = true;
-		}
-
-		if (foxyPos == 1)
-		{
-			camScr.cams[2] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + foxyLocations[1]);
-		}
-		else if (foxyPos == 2)
-		{
-			camScr.cams[2] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + foxyLocations[2]);
-		}
-		else if (foxyPos >= 3)
-		{
-			foxyPos = 3;
-			if (nightScr._whichNight < 5)
-			{
-				camScr.cams[2] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + foxyLocations[3]);
-			}
-			else
-			{
-				camScr.cams[2] = Resources.Load<Sprite>("gfx/FNaF1/Game/Cameras/anni/" + foxyLocations[4]);
-			}
-
-			if (!foxyAtDoor)
-			{
-				StartCoroutine(foxyAttack());
-			}
-		}
-
-		*/
-
-		if (freddyMoved || bonnieMoved || chicaMoved || foxyMoved || toyFreddyMoved || toyChicaMoved || toyBonnieMoved || mangleMoved || bbMoved || marionetteMoved)
+		if ((stageMovement == true || pAsMovement == true || prizeCounterMovement == true || balloonBoyMovement == true))
 		{
 			staticOverlay.color = fxColor;
 			if (camScr.isOn)
@@ -1111,6 +991,15 @@ public class animatronic_2 : MonoBehaviour {
     {
 		double rand = System.Math.Round(UnityEngine.Random.Range(0f, bbSfx.Length - 1));
 		bbSfxPlayer.clip = bbSfx[(int)rand];
+		if (bbPos != 5)
+		{
+			bbSfxPlayer.volume = 0.1f;
+		}
+		else
+		{
+			bbSfxPlayer.volume = 1f;
+
+		}
 		bbSfxPlayer.Play();
 	}
 
@@ -1119,15 +1008,21 @@ public class animatronic_2 : MonoBehaviour {
 		marionetteSfxPlayer.Play();
     }
 
-	void setStageImages()
+	bool setStageImages()
 	{
+		bool returnBool = false;
+
 		if (toyBonniePos <= 0 && toyChicaPos >= 1)
 		{
 			toyChicaPos = 0;
+
+			returnBool = false;
 		}
 		if (toyFreddyPos >= 1 && (toyChicaPos <= 0 || toyBonniePos <= 0))
 		{
 			toyFreddyPos = 0;
+
+			returnBool = false;
 		}
 
 
@@ -1137,6 +1032,9 @@ public class animatronic_2 : MonoBehaviour {
 			camScr.cams[8] = timelySprite;
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCamsLit[0]);
 			flashlightScr.camsLit[8] = timelySprite2;
+
+			if ((toyFreddyMoved || toyBonnieMoved || toyChicaMoved))
+				returnBool = true;
 		}
 		if (toyBonniePos >= 1 && toyChicaPos >= 1)
         {
@@ -1144,6 +1042,9 @@ public class animatronic_2 : MonoBehaviour {
 			camScr.cams[8] = timelySprite;
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCamsLit[1]);
 			flashlightScr.camsLit[8] = timelySprite2;
+
+			if ((toyFreddyMoved || toyBonnieMoved || toyChicaMoved))
+				returnBool = true;
 		}
 
 		if (toyFreddyPos >= 1 && toyBonniePos >= 1 && toyChicaPos >= 1)
@@ -1152,22 +1053,35 @@ public class animatronic_2 : MonoBehaviour {
 			camScr.cams[8] = timelySprite;
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + stageCamsLit[2]);
 			flashlightScr.camsLit[8] = timelySprite2;
+
+			if ((toyFreddyMoved || toyBonnieMoved || toyChicaMoved))
+				returnBool = true;
 		}
+
+		return returnBool;
 	}
 
-	void setPartsAndServiceImages()
+	bool setPartsAndServiceImages()
     {
+		bool returnBool = false;
+
 		if (bonniePos <= 0 && chicaPos >= 1)
 		{
 			chicaPos = 0;
+
+			returnBool = false;
 		}
 		if (foxyPos >= 1 && (freddyPos <= 0 || chicaPos <= 0 || bonniePos <= 0))
 		{
 			foxyPos = 0;
+
+			returnBool = false;
 		}
 		if (freddyPos >= 1 && (chicaPos <= 0 || bonniePos <= 0))
 		{
 			freddyPos = 0;
+
+			returnBool = false;
 		}
 
 		if (bonniePos >= 1 && chicaPos <= 0)
@@ -1176,6 +1090,9 @@ public class animatronic_2 : MonoBehaviour {
 			camScr.cams[7] = timelySprite;
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + partsAndServiceCamsLit[0]);
 			flashlightScr.camsLit[7] = timelySprite2;
+
+			if ((freddyMoved || bonnieMoved || chicaMoved || foxyMoved))
+				returnBool = true;
 		}
 		if (bonniePos >= 1 && chicaPos >= 1)
 		{
@@ -1183,6 +1100,9 @@ public class animatronic_2 : MonoBehaviour {
 			camScr.cams[7] = timelySprite;
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + partsAndServiceCamsLit[1]);
 			flashlightScr.camsLit[7] = timelySprite2;
+
+			if ((freddyMoved || bonnieMoved || chicaMoved || foxyMoved))
+				returnBool = true;
 		}
 
 		if (freddyPos >= 1 && bonniePos >= 1 && chicaPos >= 1 && foxyPos <= 0)
@@ -1191,6 +1111,9 @@ public class animatronic_2 : MonoBehaviour {
 			camScr.cams[7] = timelySprite;
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + partsAndServiceCamsLit[2]);
 			flashlightScr.camsLit[7] = timelySprite2;
+
+			if ((freddyMoved || bonnieMoved || chicaMoved || foxyMoved))
+				returnBool = true;
 		}
 		if (freddyPos >= 1 && bonniePos >= 1 && chicaPos >= 1 && foxyPos >= 1)
         {
@@ -1199,7 +1122,8 @@ public class animatronic_2 : MonoBehaviour {
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + partsAndServiceCamsLit[3]);
 			flashlightScr.camsLit[7] = timelySprite2;
 
-
+			if ((freddyMoved || bonnieMoved || chicaMoved || foxyMoved))
+				returnBool = true;
 		}
 		if (freddyPos >= 1 && bonniePos >= 1 && chicaPos >= 1 && foxyPos >= 2)
 		{
@@ -1207,17 +1131,27 @@ public class animatronic_2 : MonoBehaviour {
 			camScr.cams[7] = timelySprite;
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + partsAndServiceCams[0]);
 			flashlightScr.camsLit[7] = timelySprite2;
+
+			if ((freddyMoved || bonnieMoved || chicaMoved || foxyMoved))
+				returnBool = true;
 		}
+
+		return returnBool;
 	}
 
-	void setPrizeCounterImages()
+	bool setPrizeCounterImages()
     {
+		bool returnBool = false;
+
 		if (marionettePos == 1)
         {
 			Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + marionetteLocations[0]);
 			camScr.cams[10] = timelySprite;
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + marionetteLocationsLit[0]);
 			flashlightScr.camsLit[10] = timelySprite2;
+
+			if (marionetteMoved)
+				returnBool = true;
 		}
 
 		if (marionettePos == 2)
@@ -1226,6 +1160,9 @@ public class animatronic_2 : MonoBehaviour {
 			camScr.cams[10] = timelySprite;
 			Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + marionetteLocationsLit[1]);
 			flashlightScr.camsLit[10] = timelySprite2;
+			
+			if (marionetteMoved)
+				returnBool = true;
 		}
 
 		if (marionettePos == 3)
@@ -1245,8 +1182,47 @@ public class animatronic_2 : MonoBehaviour {
 
 				StartCoroutine(startWaitingForMarionetteJumpscare());
 			}
+
+			if (marionetteMoved)
+				returnBool = true;
 		}
+
+		return returnBool;
 	}
+
+    bool setBalloonBoyImages()
+    {
+		bool returnBool = false;
+
+		if (bbPos >= 1)
+        {
+			if (freddyPos > 1 || freddyPos == 0)
+            {
+				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + gameAreaCams[0]);
+				camScr.cams[9] = timelySprite;
+				Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + gameAreaCamsLit[0]);
+				flashlightScr.camsLit[9] = timelySprite2;
+			}
+            else
+            {
+				Sprite timelySprite = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + gameAreaCams[1]);
+				camScr.cams[9] = timelySprite;
+				Sprite timelySprite2 = Resources.Load<Sprite>("gfx/FNaF2/Game/Cameras/anni/" + gameAreaCamsLit[1]);
+				flashlightScr.camsLit[9] = timelySprite2;
+			}
+
+            if (bbMoved)
+            {
+				returnBool = true;
+				int i = Random.Range(0, bbSfx.Length);
+				playBbAudio();
+
+			}
+				
+		}
+
+		return returnBool;
+    }
 
 	IEnumerator startWaitingForMarionetteJumpscare()
     {
@@ -1257,6 +1233,11 @@ public class animatronic_2 : MonoBehaviour {
 
 	void startJumpscare(int jumpscareID)
 	{
+		if (camScr.isOn == true)
+        {
+			camScr.cam();
+        }
+
 		PlayerPrefs.SetInt("prev_jumpscare_game:" + nightScr._whichGame.ToString(), jumpscareID);
 		PlayerPrefs.Save();
 

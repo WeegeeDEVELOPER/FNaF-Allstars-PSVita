@@ -4264,6 +4264,9 @@ MonoBehaviour:
   - 09/499
   partsAndServiceCams:
   - 08/38
+  gameAreaCams:
+  - 10/323
+  - 10/323
   freddyLocations:
   - 07/53
   - 03/210
@@ -4292,6 +4295,7 @@ MonoBehaviour:
   - 03/83
   - 02/81
   - 06/33
+  - 04/130
   toyChicaLocations:
   - 
   - 
@@ -4312,6 +4316,9 @@ MonoBehaviour:
   - 08/202
   - 08/203
   - 08/209
+  gameAreaCamsLit:
+  - 10/326
+  - 10/514
   freddyLocationsLit:
   - 07/213
   - 03/214
@@ -4340,6 +4347,7 @@ MonoBehaviour:
   - 03/86
   - 02/182
   - 06/183
+  - 04/131
   toyChicaLocationsLit:
   - 
   - 
